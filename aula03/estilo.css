@@ -1,0 +1,33 @@
+.rendered_html ul, p{
+	font-family : Helvetica;
+}
+
+.rendered_html ul {
+  margin-left: 0em;  
+  margin-right: 0em;  
+  line-height: 1.15;
+  font-size: 20pt; 
+  text-align: justify;
+}
+
+.rendered_html ul p{
+  text-align: justify;
+}
+
+.rendered_html ul ul {
+  margin-left: 0em;
+  text-align: justify;
+  line-height: 1.05;
+  font-size: 18pt;
+}
+
+.rendered_html ul ul ul{
+  margin-left: 0em;
+  text-align: justify;
+  line-height: 1.05;
+  font-size: 16pt;
+}
+
+.rendered_html ul li:not(:last-child){
+  margin-bottom: 0.7em;
+}
