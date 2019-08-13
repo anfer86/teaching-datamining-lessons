@@ -1,21 +1,66 @@
-<html>
-    <head>
-        <title>Data Mining (IFSC)</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        <h1>Aulas de Mineração de Dados</h1>
-        <div class="list-group col-12 col-sm-6 col-md-4">
-                <a href="aula02/introducao_aprendizado.slides.html" target="_blank" class="list-group-item list-group-item-action">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Material Mineração de Dados">
+  <meta name="author" content="Carlos Andres Ferrero">
+
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Mineração de Dados</div>
+      <div class="list-group list-group-flush">
+        <a href="aula02/introducao_aprendizado.slides.html" class="mylink list-group-item list-group-item-action" onclick="return false;">
                     Introdução a Aprendizado de Máquina e Ciência de Dados
-                </a>
-                <a href="aula03/preprocessamento.slides.html" target="_blank" class="list-group-item list-group-item-action">
-                    Pré-processamento de dados
-                </a>
-        </div>
-    
-    </body>
-    
+        </a>
+		<a href="aula03/preprocessamento.slides.html" class="mylink list-group-item list-group-item-action" onclick="return false;">
+			Pré-processamento de dados
+		</a>		
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        
+      <div class="container-fluid h-100">
+        <iframe id="frame" class="w-100 h-100" src="aula02/introducao_aprendizado.slides.html"></iframe>        
+      </div>
+
+	  </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $(".mylink").click(function(e) {
+      console.log(this.href);
+	  $('#frame').attr('src', this.href);
+    });
+  </script>
+
+</body>
+
 </html>
