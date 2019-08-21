@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +37,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13068,6 +13069,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13269,7 +13309,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13283,7 +13323,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">desconhecido</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span>
@@ -13297,7 +13337,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">idades</span>
@@ -13313,7 +13353,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[104]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13363,7 +13403,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">26.6</span><span class="p">,</span> <span class="mf">27.8</span><span class="p">,</span> <span class="mf">25.6</span><span class="p">,</span> <span class="mf">26.2</span><span class="p">,</span> <span class="mf">120.0</span><span class="p">,</span> <span class="mf">20.4</span><span class="p">,</span> <span class="mf">29.4</span><span class="p">,</span> <span class="mf">24.4</span><span class="p">,</span> <span class="mf">26.9</span><span class="p">,</span> <span class="mf">26.7</span><span class="p">])</span>
@@ -13378,7 +13418,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">temperatura</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span><span class="o">/</span><span class="n">desvio</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">media</span><span class="p">,</span> <span class="n">temperatura</span> <span class="p">)</span>
@@ -13391,7 +13431,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span>
@@ -13407,7 +13447,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[107]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13565,7 +13605,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13585,7 +13625,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[108]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -14066,7 +14106,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14082,7 +14122,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[109]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -14191,7 +14231,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">normalizacao_linear</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>    
@@ -14215,7 +14255,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">normalizacao_linear</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sepal length (cm)&#39;</span><span class="p">]</span> <span class="p">)</span>
@@ -14232,7 +14272,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[111]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -14252,13 +14292,23 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Aplicação da função em todas as colunas do conjunto de dados</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_linear</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">new_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">new_data</span>
 </pre></div>
 
     </div>
@@ -14271,7 +14321,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[112]:</div>
+    <div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -14371,8 +14421,366 @@ Name: sepal length (cm), dtype: float64</pre>
       <td>0.084746</td>
       <td>0.000000</td>
     </tr>
+    <tr>
+      <th>10</th>
+      <td>0.305556</td>
+      <td>0.708333</td>
+      <td>0.084746</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.138889</td>
+      <td>0.583333</td>
+      <td>0.101695</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.138889</td>
+      <td>0.416667</td>
+      <td>0.067797</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.000000</td>
+      <td>0.416667</td>
+      <td>0.016949</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0.416667</td>
+      <td>0.833333</td>
+      <td>0.033898</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0.388889</td>
+      <td>1.000000</td>
+      <td>0.084746</td>
+      <td>0.125000</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.305556</td>
+      <td>0.791667</td>
+      <td>0.050847</td>
+      <td>0.125000</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0.222222</td>
+      <td>0.625000</td>
+      <td>0.067797</td>
+      <td>0.083333</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0.388889</td>
+      <td>0.750000</td>
+      <td>0.118644</td>
+      <td>0.083333</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.222222</td>
+      <td>0.750000</td>
+      <td>0.084746</td>
+      <td>0.083333</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0.305556</td>
+      <td>0.583333</td>
+      <td>0.118644</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0.222222</td>
+      <td>0.708333</td>
+      <td>0.084746</td>
+      <td>0.125000</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0.083333</td>
+      <td>0.666667</td>
+      <td>0.000000</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0.222222</td>
+      <td>0.541667</td>
+      <td>0.118644</td>
+      <td>0.166667</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0.138889</td>
+      <td>0.583333</td>
+      <td>0.152542</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0.194444</td>
+      <td>0.416667</td>
+      <td>0.101695</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0.194444</td>
+      <td>0.583333</td>
+      <td>0.101695</td>
+      <td>0.125000</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0.250000</td>
+      <td>0.625000</td>
+      <td>0.084746</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0.250000</td>
+      <td>0.583333</td>
+      <td>0.067797</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0.111111</td>
+      <td>0.500000</td>
+      <td>0.101695</td>
+      <td>0.041667</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>0.722222</td>
+      <td>0.500000</td>
+      <td>0.796610</td>
+      <td>0.916667</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>0.361111</td>
+      <td>0.333333</td>
+      <td>0.661017</td>
+      <td>0.791667</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>0.944444</td>
+      <td>0.333333</td>
+      <td>0.966102</td>
+      <td>0.791667</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>0.555556</td>
+      <td>0.291667</td>
+      <td>0.661017</td>
+      <td>0.708333</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>0.666667</td>
+      <td>0.541667</td>
+      <td>0.796610</td>
+      <td>0.833333</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>0.805556</td>
+      <td>0.500000</td>
+      <td>0.847458</td>
+      <td>0.708333</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>0.527778</td>
+      <td>0.333333</td>
+      <td>0.644068</td>
+      <td>0.708333</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>0.500000</td>
+      <td>0.416667</td>
+      <td>0.661017</td>
+      <td>0.708333</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>0.583333</td>
+      <td>0.333333</td>
+      <td>0.779661</td>
+      <td>0.833333</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>0.805556</td>
+      <td>0.416667</td>
+      <td>0.813559</td>
+      <td>0.625000</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>0.861111</td>
+      <td>0.333333</td>
+      <td>0.864407</td>
+      <td>0.750000</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>1.000000</td>
+      <td>0.750000</td>
+      <td>0.915254</td>
+      <td>0.791667</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>0.583333</td>
+      <td>0.333333</td>
+      <td>0.779661</td>
+      <td>0.875000</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>0.555556</td>
+      <td>0.333333</td>
+      <td>0.694915</td>
+      <td>0.583333</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>0.500000</td>
+      <td>0.250000</td>
+      <td>0.779661</td>
+      <td>0.541667</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>0.944444</td>
+      <td>0.416667</td>
+      <td>0.864407</td>
+      <td>0.916667</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>0.555556</td>
+      <td>0.583333</td>
+      <td>0.779661</td>
+      <td>0.958333</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>0.583333</td>
+      <td>0.458333</td>
+      <td>0.762712</td>
+      <td>0.708333</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>0.472222</td>
+      <td>0.416667</td>
+      <td>0.644068</td>
+      <td>0.708333</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>0.722222</td>
+      <td>0.458333</td>
+      <td>0.745763</td>
+      <td>0.833333</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>0.666667</td>
+      <td>0.458333</td>
+      <td>0.779661</td>
+      <td>0.958333</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>0.722222</td>
+      <td>0.458333</td>
+      <td>0.694915</td>
+      <td>0.916667</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>0.416667</td>
+      <td>0.291667</td>
+      <td>0.694915</td>
+      <td>0.750000</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>0.694444</td>
+      <td>0.500000</td>
+      <td>0.830508</td>
+      <td>0.916667</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>0.666667</td>
+      <td>0.541667</td>
+      <td>0.796610</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>0.666667</td>
+      <td>0.416667</td>
+      <td>0.711864</td>
+      <td>0.916667</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>0.555556</td>
+      <td>0.208333</td>
+      <td>0.677966</td>
+      <td>0.750000</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>0.611111</td>
+      <td>0.416667</td>
+      <td>0.711864</td>
+      <td>0.791667</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>0.527778</td>
+      <td>0.583333</td>
+      <td>0.745763</td>
+      <td>0.916667</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>0.444444</td>
+      <td>0.416667</td>
+      <td>0.694915</td>
+      <td>0.708333</td>
+    </tr>
   </tbody>
 </table>
+<p>150 rows × 4 columns</p>
 </div>
 </div>
 
@@ -14384,7 +14792,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14400,7 +14808,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[113]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -14521,7 +14929,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </li>
 <li><p>Outros algoritmos podem ter desempenho melhor em alguns problemas se usada a representação discretazada de uma variável contínua, como no caso do algoritmo Naïve Bayes.</p>
 </li>
-<li><p>Em algumas ocasiões o armazenamento de dados é feito com valores numéricos, embora indiquem informações discretas, por exemplo um atributo gênero, onde o valor 0 indica masculino, 1 feminino e 2 outro.</p>
+<li><p>Em algumas ocasiões o armazenamento de dados é feito com valores numéricos, embora indiquem informações categóricas, por exemplo um atributo gênero, onde o valor 0 indica masculino, 1 feminino e 2 outro.</p>
 </li>
 </ul>
 
@@ -14532,7 +14940,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>O objetivo da discretização consiste em transformar de valores numéricos para categóricos ou discretos.</p>
+<li><p>O objetivo da categorização consiste em transformar de valores numéricos para categóricos ou discretos.</p>
 </li>
 <li><p>A idéia é perder a menor quantidade de informação possível para o domínio do problema, durante esse processo.</p>
 </li>
@@ -14572,7 +14980,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -14590,7 +14998,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[114]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -14617,7 +15025,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="p">{</span><span class="s1">&#39;genero&#39;</span> <span class="p">:</span> <span class="n">genero</span><span class="p">}</span> <span class="p">)</span>
@@ -14634,7 +15042,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[115]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -14751,12 +15159,12 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Vamos acessar a coluna <code>genero</code> e executar a função <code>replace</code> que recebe as sustituições como parâmetro.</li>
+<li>Vamos acessar a coluna <code>genero</code> e executar a função <code>replace</code> que recebe as substituições como parâmetro.</li>
 </ul>
 
 </div>
@@ -14764,7 +15172,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span> <span class="p">:</span> <span class="s1">&#39;Masculino&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="p">:</span> <span class="s1">&#39;Feminino&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="p">:</span> <span class="s1">&#39;Outro&#39;</span><span class="p">})</span>
@@ -14781,7 +15189,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[116]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14919,7 +15327,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14932,7 +15340,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">to_replace</span> <span class="o">=</span> <span class="p">{</span>
@@ -14967,7 +15375,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14980,7 +15388,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span> <span class="o">=</span> <span class="n">to_replace</span><span class="p">)</span>
@@ -14997,7 +15405,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[118]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -15148,7 +15556,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_categoria_genero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -15159,7 +15567,7 @@ type:  &lt;class &#39;dict&#39;&gt;
     <span class="k">elif</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;Outro&#39;</span>
     
-<span class="n">get_categoria_genero</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">get_categoria_genero</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15172,13 +15580,13 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[135]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;Masculino&#39;</pre>
+<pre>&#39;Feminino&#39;</pre>
 </div>
 
 </div>
@@ -15189,12 +15597,12 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_categoria_genero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">dict_genero</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span> <span class="p">:</span> <span class="s1">&#39;Masculino&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="p">:</span> <span class="s1">&#39;Feminino&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="p">:</span> <span class="s1">&#39;Outro&#39;</span><span class="p">}</span>
-    <span class="k">return</span> <span class="n">genero</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">dict_genero</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
 
 <span class="n">get_categoria_genero</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
@@ -15209,13 +15617,13 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[140]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>37</pre>
+<pre>&#39;Masculino&#39;</pre>
 </div>
 
 </div>
@@ -15236,7 +15644,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria_2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_categoria_genero</span><span class="p">)</span>
@@ -15253,7 +15661,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[137]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -15447,7 +15855,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -15466,7 +15874,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[151]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -15583,10 +15991,10 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[155]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_discretized_idade</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -15609,7 +16017,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[157]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;idade_discretizado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">idade</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_discretized_idade</span><span class="p">)</span>
@@ -15626,7 +16034,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[157]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -15810,7 +16218,7 @@ $$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Em R podemos fazer isso utilizando <em>ifelse</em>, mas também podemos usar a operação de divisão de inteiros, como segue:</li>
+<li>Vamos construir um conjunto de dados de 500 valores de idade entre 1 e 100.</li>
 </ul>
 
 </div>
@@ -15818,7 +16226,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[210]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -15875,10 +16283,20 @@ $$
 </div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Calculamos a largura do intervalo $L$ conforme a equação:</li>
+</ul>
+$$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
@@ -15911,11 +16329,12 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade_discretizado</span> <span class="o">=</span> <span class="p">(</span><span class="n">idade</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">idade</span><span class="p">))</span> <span class="o">//</span> <span class="n">L</span>
-<span class="n">idade_discretizado</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">intervalos</span> <span class="o">=</span> <span class="p">(</span><span class="n">idade</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">idade</span><span class="p">))</span> <span class="o">//</span> <span class="n">L</span>
+<span class="n">intervalos_largura_fixa</span> <span class="o">=</span> <span class="n">intervalos</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">intervalos_largura_fixa</span>
 </pre></div>
 
     </div>
@@ -15928,7 +16347,7 @@ $$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[185]:</div>
+    <div class="prompt output_prompt">Out[78]:</div>
 
 
 
@@ -15964,6 +16383,40 @@ $$
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<span class="n">Counter</span><span class="p">(</span><span class="n">idade_discretizado</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[79]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Counter({1: 124, 0: 133, 2: 111, 3: 132})</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -15984,25 +16437,23 @@ $$
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Exemplo,</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[211]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">idade</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">101</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">idade</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idade</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">rankdata</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">rankdata</span><span class="p">(</span><span class="n">idade</span><span class="p">)</span>
+
+<span class="n">L</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span>
+<span class="n">intervalos</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">//</span> <span class="n">L</span>
+
+<span class="n">intervalos_igual_frequencia</span> <span class="o">=</span> <span class="n">intervalos</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">intervalos_igual_frequencia</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16019,34 +16470,20 @@ $$
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[ 38  13  73  10  76   6  80  65  17   2  77  72   7  26  51  21  19  85
-  12  29  30  15  51  69  88  88  95  97  87  14  10   8  64  62  23  58
-   2   1  61  82   9  89  14  48  73  31  72   4  71  22  50  58   4  69
-  25  44  77  27  53  81  42  83  16  65  69  26  99  88   8  27  26  23
-  10  68  24  28  38  58  84  39   9  33  35  11  24  16  88  26  72  93
-  75  63  47  33  89  24  56  66  78   4   1  78   7  53  86  71   3  77
-  92  22  76   8  78  73  76  77  44  21  31  37   8  46  69  58  83  97
-  14  11  24  82   8  25  75  93  21  33  13  66  95  61  25  83  98   3
-  93  99  11  55  97  83  87  71  67  72  49  55  16   6  18  43  21  49
-  23  14  98  54  85  11  97  56  62  57  90  22  97  84  26  15  14  85
-  44   7  78  57  60  16  25  10  67  72  54  70  37  22  41  78  92  50
-  48  78  41  79  46  88  17  29  46  68  67  79  47   1  30  64  76  36
-  54  94  34   3  85  84  49  55  33  29  56  83  32  29  95  75   9 100
-  33   9  85  78  51  80  42  65  84  25  21  45  16  31  92  15  20  27
-  87   8 100  54  48  61  35  33  20  68  25  84  95  39  48   6  80  64
-  88  33  43  75  67  89  99  31  18  69  65  61  79  18  40  36  82  29
-  23  39  42  75  78  71  26  49  51  63  45  55   1  87  17  20  10  93
-  52  11  69  24  15  64  22  47   4  57  89  81  47  55  80  72  15  78
-  16  26  54  85  59  86  30  45  38  23  92  55  77  13  60  27  77  72
-  88  40  44  77  39  92  70  99  34  44  27  57  70  74  53  90  28  44
-   2  83  95  97  27  85  31  65  23  99  53   4  71  13  40  84  49  62
-  71  14  37  24  23  67  93  96  54  10  42  58  89  94  77  83  12  37
-  17  31  85  58  36  42  82   3  86  94  37  47  81  28  73  29   3 100
-  14  42  37  41  19  98  39  64  47  90   3  99  29  79  76  59  43  27
-  22  59  17  93  38  12  23   7  97  15  88  76  36  64  33  92  50   1
-  23  98  71  37  19  28  29  53  95  51  47   8  86  17  30  12  62  15
-  31   9  41  49  31  24  67  93  65  13  18  34  11  29  76   6  82   6
-  43  87  53  58  57  79  88  82  11  73  49  20  13  26]
+<pre>[1 0 2 0 2 0 3 2 0 0 3 2 0 1 2 0 0 3 0 1 1 0 2 2 3 3 3 3 3 0 0 0 2 2 0 2 0
+ 0 2 3 0 3 0 1 2 1 2 0 2 0 2 2 0 2 1 1 3 1 2 3 1 3 0 2 2 1 3 3 0 1 1 0 0 2
+ 0 1 1 2 3 1 0 1 1 0 0 0 3 1 2 3 2 2 1 1 3 0 2 2 3 0 0 3 0 2 3 2 0 3 3 0 2
+ 0 3 2 2 3 1 0 1 1 0 1 2 2 3 3 0 0 0 3 0 1 2 3 0 1 0 2 3 2 1 3 3 0 3 3 0 2
+ 3 3 3 2 2 2 1 2 0 0 0 1 0 1 0 0 3 2 3 0 3 2 2 2 3 0 3 3 1 0 0 3 1 0 3 2 2
+ 0 1 0 2 2 2 2 1 0 1 3 3 2 1 3 1 3 1 3 0 1 1 2 2 3 1 0 1 2 2 1 2 3 1 0 3 3
+ 1 2 1 1 2 3 1 1 3 2 0 3 1 0 3 3 2 3 1 2 3 1 0 1 0 1 3 0 0 1 3 0 3 2 1 2 1
+ 1 0 2 1 3 3 1 1 0 3 2 3 1 1 2 2 3 3 1 0 2 2 2 3 0 1 1 3 1 0 1 1 2 3 2 1 1
+ 2 2 1 2 0 3 0 0 0 3 2 0 2 0 0 2 0 1 0 2 3 3 1 2 3 2 0 3 0 1 2 3 2 3 1 1 1
+ 0 3 2 3 0 2 1 3 2 3 1 1 3 1 3 2 3 1 1 1 2 2 2 2 3 1 1 0 3 3 3 1 3 1 2 0 3
+ 2 0 2 0 1 3 1 2 2 0 1 0 0 2 3 3 2 0 1 2 3 3 3 3 0 1 0 1 3 2 1 1 3 0 3 3 1
+ 1 3 1 2 1 0 3 0 1 1 1 0 3 1 2 1 3 0 3 1 3 2 2 1 1 0 2 0 3 1 0 0 0 3 0 3 2
+ 1 2 1 3 2 0 0 3 2 1 0 1 1 2 3 2 1 0 3 0 1 0 2 0 1 0 1 1 1 0 2 3 2 0 0 1 0
+ 1 2 0 3 0 1 3 2 2 2 3 3 3 0 2 1 0 0 1]
 </pre>
 </div>
 </div>
@@ -16057,11 +16494,11 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[217]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ordem</span> <span class="o">=</span> <span class="n">idade</span><span class="o">.</span><span class="n">argsort</span><span class="p">()</span>
-<span class="nb">max</span><span class="p">(</span><span class="n">ordem</span><span class="o">.</span><span class="n">argsort</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<span class="n">Counter</span><span class="p">(</span><span class="n">intervalos</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16074,133 +16511,15 @@ $$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[217]:</div>
+    <div class="prompt output_prompt">Out[88]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>499</pre>
+<pre>Counter({1.0: 127, 0.0: 127, 2.0: 121, 3.0: 125})</pre>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[216]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idade</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[216]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([199,  57, 357,  45, 371,  21, 400, 321,  83,   7, 378, 350,  27,
-       140, 258, 102,  95, 425,  56, 158, 163,  74, 261, 336, 446, 448,
-       478, 482, 438,  68,  44,  30, 315, 307, 111, 295,   6,   4, 303,
-       404,  36, 451,  64, 245, 360, 166, 355,  17, 344, 110, 255, 290,
-        18, 335, 130, 229, 380, 143, 264, 401, 217, 416,  77, 322, 334,
-       139, 492, 440,  34, 145, 138, 119,  42, 332, 121, 149, 198, 294,
-       420, 206,  38, 175, 186,  47, 124,  78, 443, 137, 356, 467, 366,
-       309, 239, 180, 453, 126, 281, 324, 390,  14,   1, 385,  26, 268,
-       432, 348,  10, 381, 457, 107, 370,  31, 391, 358, 368, 376, 224,
-       101, 169, 192,  29, 233, 337, 289, 415, 486,  63,  51, 122, 407,
-        33, 129, 367, 466, 103, 181,  60, 323, 474, 301, 131, 411, 489,
-        11, 465, 493,  48, 276, 485, 413, 437, 346, 326, 353, 251, 279,
-        79,  22,  91, 222, 100, 250, 114,  66, 488, 273, 423,  50, 483,
-       282, 308, 284, 454, 106, 484, 419, 133,  70,  67, 424, 226,  25,
-       389, 285, 299,  81, 127,  43, 330, 351, 272, 341, 191, 109, 211,
-       387, 462, 254, 243, 386, 210, 396, 234, 447,  88, 155, 235, 333,
-       328, 393, 242,   2, 161, 311, 369, 189, 271, 470, 183,   8, 427,
-       422, 252, 280, 177, 160, 283, 410, 173, 152, 475, 365,  35, 499,
-       178,  39, 428, 384, 259, 398, 214, 320, 418, 128, 104, 230,  80,
-       172, 461,  71,  96, 142, 435,  32, 498, 274, 244, 302, 185, 179,
-        99, 331, 132, 417, 473, 204, 246,  20, 399, 316, 445, 176, 223,
-       363, 325, 449, 494, 167,  90, 339, 317, 304, 395,  89, 208, 190,
-       409, 154, 112, 203, 219, 364, 388, 347, 134, 247, 260, 310, 232,
-       275,   3, 439,  84,  97,  40, 463, 262,  52, 338, 125,  73, 313,
-       108, 238,  15, 288, 450, 403, 241, 278, 397, 352,  76, 383,  82,
-       135, 270, 429, 298, 434, 164, 231, 201, 113, 459, 277, 382,  62,
-       300, 146, 377, 354, 442, 207, 228, 379, 202, 460, 342, 491, 184,
-       225, 144, 287, 340, 362, 265, 455, 151, 227,   5, 414, 476, 481,
-       141, 430, 165, 319, 116, 496, 263,  16, 349,  59, 209, 421, 248,
-       306, 343,  65, 193, 120, 115, 327, 469, 479, 269,  41, 215, 292,
-       452, 471, 375, 412,  53, 194,  85, 168, 426, 293, 188, 218, 406,
-         9, 433, 472, 195, 236, 402, 148, 361, 156,  13, 497,  69, 216,
-       196, 212,  94, 487, 205, 312, 237, 456,  12, 495, 153, 392, 373,
-       297, 221, 147, 105, 296,  86, 468, 200,  55, 117,  24, 480,  75,
-       441, 374, 187, 314, 174, 458, 256,   0, 118, 490, 345, 197,  93,
-       150, 157, 267, 477, 257, 240,  28, 431,  87, 162,  54, 305,  72,
-       171,  37, 213, 249, 170, 123, 329, 464, 318,  58,  92, 182,  49,
-       159, 372,  23, 405,  19, 220, 436, 266, 291, 286, 394, 444, 408,
-        46, 359, 253,  98,  61, 136])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[213]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idade</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">rank</span><span class="p">(</span><span class="n">idade</span><span class="p">)</span>
-<span class="n">L</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span>
-<span class="n">x</span><span class="o">.</span><span class="n">intervalos</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">//</span> <span class="n">L</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">intervalos</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-213-d2cb54c53e7d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      2</span> N <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>round<span class="ansi-yellow-intense-fg ansi-bold">(</span>len<span class="ansi-yellow-intense-fg ansi-bold">(</span>idade<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">/</span> k<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      3</span> 
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>x <span class="ansi-yellow-intense-fg ansi-bold">=</span> rank<span class="ansi-yellow-intense-fg ansi-bold">(</span>idade<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      5</span> L <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>np<span class="ansi-yellow-intense-fg ansi-bold">.</span>max<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>min<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">-</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">/</span> k
-<span class="ansi-green-fg">      6</span> x<span class="ansi-yellow-intense-fg ansi-bold">.</span>intervalos <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>x <span class="ansi-yellow-intense-fg ansi-bold">-</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>min<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">//</span> L
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;rank&#39; is not defined</pre>
-</div>
 </div>
 
 </div>
@@ -16209,24 +16528,11 @@ $$
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">idade</span><span class="p">,</span> <span class="n">rank</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">intervalo</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">intervalos</span><span class="p">)</span>
-<span class="n">head</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt</span><span class="p">[,</span> <span class="o">.</span><span class="n">N</span> <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="n">intervalo</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s2">&quot;idade&quot;</span> <span class="p">:</span> <span class="n">idade</span><span class="p">,</span> <span class="s2">&quot;rank&quot;</span> <span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;intervalo&quot;</span> <span class="p">:</span> <span class="n">intervalos_igual_frequencia</span><span class="p">}</span> <span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -16239,17 +16545,407 @@ $$
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[89]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-15-aa5cb59979ee&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    dt[, .N ,by = intervalo]</span>
-<span class="ansi-white-intense-fg ansi-bold">       ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
-</pre>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>idade</th>
+      <th>rank</th>
+      <th>intervalo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>38</td>
+      <td>200.5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>13</td>
+      <td>60.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>73</td>
+      <td>360.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10</td>
+      <td>43.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>76</td>
+      <td>372.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>22.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>80</td>
+      <td>399.5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>65</td>
+      <td>320.5</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>17</td>
+      <td>86.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2</td>
+      <td>7.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>77</td>
+      <td>379.5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>72</td>
+      <td>354.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>7</td>
+      <td>26.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>26</td>
+      <td>137.5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>51</td>
+      <td>260.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>21</td>
+      <td>103.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>19</td>
+      <td>95.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>85</td>
+      <td>427.5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>12</td>
+      <td>55.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>29</td>
+      <td>157.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>30</td>
+      <td>163.5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>15</td>
+      <td>74.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>51</td>
+      <td>260.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>69</td>
+      <td>337.5</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>88</td>
+      <td>445.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>88</td>
+      <td>445.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>95</td>
+      <td>476.5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>97</td>
+      <td>484.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>87</td>
+      <td>438.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>14</td>
+      <td>67.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>470</th>
+      <td>41</td>
+      <td>212.5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>471</th>
+      <td>49</td>
+      <td>251.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>472</th>
+      <td>31</td>
+      <td>169.5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>473</th>
+      <td>24</td>
+      <td>124.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>474</th>
+      <td>67</td>
+      <td>328.5</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>475</th>
+      <td>93</td>
+      <td>467.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>476</th>
+      <td>65</td>
+      <td>320.5</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>477</th>
+      <td>13</td>
+      <td>60.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>478</th>
+      <td>18</td>
+      <td>91.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>479</th>
+      <td>34</td>
+      <td>184.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>480</th>
+      <td>11</td>
+      <td>50.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>481</th>
+      <td>29</td>
+      <td>157.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>482</th>
+      <td>76</td>
+      <td>372.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>483</th>
+      <td>6</td>
+      <td>22.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>484</th>
+      <td>82</td>
+      <td>407.5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>485</th>
+      <td>6</td>
+      <td>22.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>486</th>
+      <td>43</td>
+      <td>222.5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>487</th>
+      <td>87</td>
+      <td>438.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>488</th>
+      <td>53</td>
+      <td>266.5</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>489</th>
+      <td>58</td>
+      <td>293.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>490</th>
+      <td>57</td>
+      <td>287.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>491</th>
+      <td>79</td>
+      <td>395.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>492</th>
+      <td>88</td>
+      <td>445.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>493</th>
+      <td>82</td>
+      <td>407.5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>494</th>
+      <td>11</td>
+      <td>50.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>495</th>
+      <td>73</td>
+      <td>360.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>496</th>
+      <td>49</td>
+      <td>251.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>497</th>
+      <td>20</td>
+      <td>98.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>498</th>
+      <td>13</td>
+      <td>60.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>499</th>
+      <td>26</td>
+      <td>137.5</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>500 rows × 3 columns</p>
 </div>
+</div>
+
 </div>
 
 </div>
@@ -16474,7 +17170,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">,</span> 
@@ -16488,28 +17184,6 @@ $$
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-14-cf1073ff04d1&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">2</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    dia.do.mes = mday(data.nasc),</span>
-<span class="ansi-white-intense-fg ansi-bold">    ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> keyword can&#39;t be an expression
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -16543,6 +17217,9 @@ $$
 <li>Modelo de regressão, quando o atributo com valor desconhecido é numérico.</li>
 </ul>
 </li>
+<li>Pequisar no Capítulo 3 do livro, as 6 estratégias de tratamento de dados desconhecidos:<blockquote><p>Data Mining: Concepts and Techniques, 3rd Edition. Jiawei Han, Micheline Kamber, Jian Pei. Database Modeling and Design: Logical Design, 5th Edition.</p>
+</blockquote>
+</li>
 <li>Após, usa-se o modelo para predizer o valor desconhecido.</li>
 <li>Por exemplo, no conjunto de dados <em>iris</em>, vamos retirar 10 valores de <em>Sepal.Length</em></li>
 </ul>
@@ -16552,7 +17229,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[371]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -16573,8 +17250,12 @@ $$
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre> [1]  40  56  85 134  30 131 137  95  90   9
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-90-a7f7915e9917&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">2</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    desconhecidos &lt;- sample( x = 1:nrow(iris), size = 10, replace = F)</span>
+<span class="ansi-white-intense-fg ansi-bold">                                  ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
 </pre>
 </div>
 </div>
@@ -16585,7 +17266,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[372]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my</span><span class="o">.</span><span class="n">iris</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">iris</span><span class="p">)[,</span><span class="o">.</span><span class="p">(</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span><span class="p">,</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Width</span><span class="p">,</span><span class="n">Petal</span><span class="o">.</span><span class="n">Length</span><span class="p">,</span><span class="n">Petal</span><span class="o">.</span><span class="n">Width</span><span class="p">)]</span>
@@ -16593,6 +17274,28 @@ $$
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-91-40e4c53c693c&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    my.iris &lt;- data.table(iris)[,.(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width)]</span>
+<span class="ansi-white-intense-fg ansi-bold">                                ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16609,7 +17312,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[373]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">&lt;-</span> <span class="n">lm</span><span class="p">(</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span> <span class="o">~</span> <span class="o">.</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">my</span><span class="o">.</span><span class="n">iris</span><span class="p">[</span><span class="o">-</span><span class="n">desconhecidos</span><span class="p">])</span>
@@ -16632,7 +17335,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[374]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">my</span><span class="o">.</span><span class="n">iris</span><span class="p">[</span><span class="n">desconhecidos</span><span class="p">,])</span>
@@ -16655,7 +17358,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[375]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">observed</span> <span class="o">&lt;-</span> <span class="n">iris</span><span class="err">$</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span><span class="p">[</span><span class="n">desconhecidos</span><span class="p">]</span>
@@ -16664,35 +17367,6 @@ $$
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<table>
-<thead><tr><th scope=col>predicted</th><th scope=col>observed</th></tr></thead>
-<tbody>
-	<tr><td>5.034053</td><td>5.1     </td></tr>
-	<tr><td>6.158224</td><td>5.7     </td></tr>
-	<tr><td>6.179538</td><td>5.4     </td></tr>
-	<tr><td>6.470971</td><td>6.3     </td></tr>
-	<tr><td>4.975430</td><td>4.7     </td></tr>
-</tbody>
-</table>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -16709,7 +17383,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[376]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean</span><span class="o">.</span><span class="n">predictor</span> <span class="o">&lt;-</span> <span class="n">mean</span><span class="p">(</span><span class="n">my</span><span class="o">.</span><span class="n">iris</span><span class="err">$</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span><span class="p">[</span><span class="o">-</span><span class="n">desconhecidos</span><span class="p">])</span>
@@ -16721,31 +17395,6 @@ $$
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<table>
-<thead><tr><th scope=col>EMQ.my.predictor</th><th scope=col>EMQ.mean.predictor</th></tr></thead>
-<tbody>
-	<tr><td>0.1456242</td><td>0.7238617</td></tr>
-</tbody>
-</table>
-
-</div>
-
-</div>
-
 </div>
 </div>
 

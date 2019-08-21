@@ -1,1 +1,1 @@
-jupyter nbconvert --to slides redes_neurais_regressão_sequencias.ipynb --SlidesExporter.reveal_scroll=True
+jupyter nbconvert --to slides --SlidesExporter.reveal_scroll=True
