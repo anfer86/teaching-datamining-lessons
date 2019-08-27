@@ -13251,6 +13251,19 @@ a.anchor-link {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13309,7 +13322,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[390]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13323,7 +13336,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[391]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">desconhecido</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span>
@@ -13337,7 +13350,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[392]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">idades</span>
@@ -13353,7 +13366,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[392]:</div>
 
 
 
@@ -13403,7 +13416,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[393]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">26.6</span><span class="p">,</span> <span class="mf">27.8</span><span class="p">,</span> <span class="mf">25.6</span><span class="p">,</span> <span class="mf">26.2</span><span class="p">,</span> <span class="mf">120.0</span><span class="p">,</span> <span class="mf">20.4</span><span class="p">,</span> <span class="mf">29.4</span><span class="p">,</span> <span class="mf">24.4</span><span class="p">,</span> <span class="mf">26.9</span><span class="p">,</span> <span class="mf">26.7</span><span class="p">])</span>
@@ -13418,7 +13431,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[394]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">temperatura</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span><span class="o">/</span><span class="n">desvio</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">media</span><span class="p">,</span> <span class="n">temperatura</span> <span class="p">)</span>
@@ -13431,7 +13444,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[395]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span>
@@ -13447,7 +13460,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[395]:</div>
 
 
 
@@ -13605,13 +13618,13 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[396]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">datasets</span>
 <span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
-<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">])</span>
 <span class="n">data</span>
 </pre></div>
 
@@ -13625,7 +13638,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[396]:</div>
 
 
 
@@ -14106,7 +14119,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[397]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14122,7 +14135,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[397]:</div>
 
 
 
@@ -14231,10 +14244,10 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[398]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">normalizacao_linear</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>    
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">normalizacao_linear</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
     <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
 </pre></div>
 
@@ -14255,11 +14268,13 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[399]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">normalizacao_linear</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sepal length (cm)&#39;</span><span class="p">]</span> <span class="p">)</span>
-<span class="n">new_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;min: &#39;</span><span class="p">,</span> <span class="n">new_data</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;max: &#39;</span><span class="p">,</span> <span class="n">new_data</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="n">new_data</span>
 </pre></div>
 
     </div>
@@ -14272,18 +14287,36 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>min:  0.0
+max:  1.0
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[399]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0    0.222222
-1    0.166667
-2    0.111111
-3    0.083333
-4    0.194444
-Name: sepal length (cm), dtype: float64</pre>
+<pre>0      0.222222
+1      0.166667
+2      0.111111
+3      0.083333
+4      0.194444
+         ...   
+145    0.666667
+146    0.555556
+147    0.611111
+148    0.527778
+149    0.444444
+Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div>
 
 </div>
@@ -14304,11 +14337,11 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[400]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_linear</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">new_data</span>
+<span class="n">new_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14321,7 +14354,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[51]:</div>
+    <div class="prompt output_prompt">Out[400]:</div>
 
 
 
@@ -14386,401 +14419,8 @@ Name: sepal length (cm), dtype: float64</pre>
       <td>0.067797</td>
       <td>0.041667</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>0.305556</td>
-      <td>0.791667</td>
-      <td>0.118644</td>
-      <td>0.125000</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.083333</td>
-      <td>0.583333</td>
-      <td>0.067797</td>
-      <td>0.083333</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.194444</td>
-      <td>0.583333</td>
-      <td>0.084746</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0.027778</td>
-      <td>0.375000</td>
-      <td>0.067797</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>0.166667</td>
-      <td>0.458333</td>
-      <td>0.084746</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.305556</td>
-      <td>0.708333</td>
-      <td>0.084746</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>0.138889</td>
-      <td>0.583333</td>
-      <td>0.101695</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>0.138889</td>
-      <td>0.416667</td>
-      <td>0.067797</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>0.000000</td>
-      <td>0.416667</td>
-      <td>0.016949</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>0.416667</td>
-      <td>0.833333</td>
-      <td>0.033898</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>0.388889</td>
-      <td>1.000000</td>
-      <td>0.084746</td>
-      <td>0.125000</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>0.305556</td>
-      <td>0.791667</td>
-      <td>0.050847</td>
-      <td>0.125000</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>0.222222</td>
-      <td>0.625000</td>
-      <td>0.067797</td>
-      <td>0.083333</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>0.388889</td>
-      <td>0.750000</td>
-      <td>0.118644</td>
-      <td>0.083333</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>0.222222</td>
-      <td>0.750000</td>
-      <td>0.084746</td>
-      <td>0.083333</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>0.305556</td>
-      <td>0.583333</td>
-      <td>0.118644</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>0.222222</td>
-      <td>0.708333</td>
-      <td>0.084746</td>
-      <td>0.125000</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>0.083333</td>
-      <td>0.666667</td>
-      <td>0.000000</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>0.222222</td>
-      <td>0.541667</td>
-      <td>0.118644</td>
-      <td>0.166667</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>0.138889</td>
-      <td>0.583333</td>
-      <td>0.152542</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>0.194444</td>
-      <td>0.416667</td>
-      <td>0.101695</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>0.194444</td>
-      <td>0.583333</td>
-      <td>0.101695</td>
-      <td>0.125000</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>0.250000</td>
-      <td>0.625000</td>
-      <td>0.084746</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>0.250000</td>
-      <td>0.583333</td>
-      <td>0.067797</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>0.111111</td>
-      <td>0.500000</td>
-      <td>0.101695</td>
-      <td>0.041667</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>0.722222</td>
-      <td>0.500000</td>
-      <td>0.796610</td>
-      <td>0.916667</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>0.361111</td>
-      <td>0.333333</td>
-      <td>0.661017</td>
-      <td>0.791667</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>0.944444</td>
-      <td>0.333333</td>
-      <td>0.966102</td>
-      <td>0.791667</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>0.555556</td>
-      <td>0.291667</td>
-      <td>0.661017</td>
-      <td>0.708333</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>0.666667</td>
-      <td>0.541667</td>
-      <td>0.796610</td>
-      <td>0.833333</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>0.805556</td>
-      <td>0.500000</td>
-      <td>0.847458</td>
-      <td>0.708333</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>0.527778</td>
-      <td>0.333333</td>
-      <td>0.644068</td>
-      <td>0.708333</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>0.500000</td>
-      <td>0.416667</td>
-      <td>0.661017</td>
-      <td>0.708333</td>
-    </tr>
-    <tr>
-      <th>128</th>
-      <td>0.583333</td>
-      <td>0.333333</td>
-      <td>0.779661</td>
-      <td>0.833333</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>0.805556</td>
-      <td>0.416667</td>
-      <td>0.813559</td>
-      <td>0.625000</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>0.861111</td>
-      <td>0.333333</td>
-      <td>0.864407</td>
-      <td>0.750000</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>1.000000</td>
-      <td>0.750000</td>
-      <td>0.915254</td>
-      <td>0.791667</td>
-    </tr>
-    <tr>
-      <th>132</th>
-      <td>0.583333</td>
-      <td>0.333333</td>
-      <td>0.779661</td>
-      <td>0.875000</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>0.555556</td>
-      <td>0.333333</td>
-      <td>0.694915</td>
-      <td>0.583333</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>0.500000</td>
-      <td>0.250000</td>
-      <td>0.779661</td>
-      <td>0.541667</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>0.944444</td>
-      <td>0.416667</td>
-      <td>0.864407</td>
-      <td>0.916667</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>0.555556</td>
-      <td>0.583333</td>
-      <td>0.779661</td>
-      <td>0.958333</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>0.583333</td>
-      <td>0.458333</td>
-      <td>0.762712</td>
-      <td>0.708333</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>0.472222</td>
-      <td>0.416667</td>
-      <td>0.644068</td>
-      <td>0.708333</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>0.722222</td>
-      <td>0.458333</td>
-      <td>0.745763</td>
-      <td>0.833333</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>0.666667</td>
-      <td>0.458333</td>
-      <td>0.779661</td>
-      <td>0.958333</td>
-    </tr>
-    <tr>
-      <th>141</th>
-      <td>0.722222</td>
-      <td>0.458333</td>
-      <td>0.694915</td>
-      <td>0.916667</td>
-    </tr>
-    <tr>
-      <th>142</th>
-      <td>0.416667</td>
-      <td>0.291667</td>
-      <td>0.694915</td>
-      <td>0.750000</td>
-    </tr>
-    <tr>
-      <th>143</th>
-      <td>0.694444</td>
-      <td>0.500000</td>
-      <td>0.830508</td>
-      <td>0.916667</td>
-    </tr>
-    <tr>
-      <th>144</th>
-      <td>0.666667</td>
-      <td>0.541667</td>
-      <td>0.796610</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>0.666667</td>
-      <td>0.416667</td>
-      <td>0.711864</td>
-      <td>0.916667</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>0.555556</td>
-      <td>0.208333</td>
-      <td>0.677966</td>
-      <td>0.750000</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>0.611111</td>
-      <td>0.416667</td>
-      <td>0.711864</td>
-      <td>0.791667</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>0.527778</td>
-      <td>0.583333</td>
-      <td>0.745763</td>
-      <td>0.916667</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>0.444444</td>
-      <td>0.416667</td>
-      <td>0.694915</td>
-      <td>0.708333</td>
-    </tr>
   </tbody>
 </table>
-<p>150 rows × 4 columns</p>
 </div>
 </div>
 
@@ -14792,7 +14432,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[401]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14808,7 +14448,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[401]:</div>
 
 
 
@@ -14920,6 +14560,374 @@ Name: sepal length (cm), dtype: float64</pre>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[402]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">TODO</span>
+<span class="sd">Normalização por Desvio-padrão</span>
+<span class="sd">Normalização por Valor Máximo</span>
+<span class="sd">Normalização por Escala Decimal</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">normalizacao_desvio_padrao</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_desvio_padrao</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">new_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[402]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>sepal width (cm)</th>
+      <th>petal length (cm)</th>
+      <th>petal width (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>150.00000</td>
+      <td>150.00000</td>
+      <td>150.00000</td>
+      <td>150.00000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>-0.00000</td>
+      <td>-0.00000</td>
+      <td>-0.00000</td>
+      <td>-0.00000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.00335</td>
+      <td>1.00335</td>
+      <td>1.00335</td>
+      <td>1.00335</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-1.87002</td>
+      <td>-2.43395</td>
+      <td>-1.56758</td>
+      <td>-1.44708</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>-0.90068</td>
+      <td>-0.59237</td>
+      <td>-1.22655</td>
+      <td>-1.18381</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>-0.05251</td>
+      <td>-0.13198</td>
+      <td>0.33648</td>
+      <td>0.13251</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>0.67450</td>
+      <td>0.55861</td>
+      <td>0.76276</td>
+      <td>0.79067</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2.49202</td>
+      <td>3.09078</td>
+      <td>1.78583</td>
+      <td>1.71210</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[403]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">normalizacao_maximo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_maximo</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">new_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[403]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>sepal width (cm)</th>
+      <th>petal length (cm)</th>
+      <th>petal width (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.739662</td>
+      <td>0.694848</td>
+      <td>0.544638</td>
+      <td>0.479733</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.104818</td>
+      <td>0.099061</td>
+      <td>0.255840</td>
+      <td>0.304895</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.544304</td>
+      <td>0.454545</td>
+      <td>0.144928</td>
+      <td>0.040000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.645570</td>
+      <td>0.636364</td>
+      <td>0.231884</td>
+      <td>0.120000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.734177</td>
+      <td>0.681818</td>
+      <td>0.630435</td>
+      <td>0.520000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>0.810127</td>
+      <td>0.750000</td>
+      <td>0.739130</td>
+      <td>0.720000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[404]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">normalizacao_escala_decimal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>    
+    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="n">j</span>
+    
+<span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_escala_decimal</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[404]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>sepal width (cm)</th>
+      <th>petal length (cm)</th>
+      <th>petal width (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.00000</td>
+      <td>150.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.584333</td>
+      <td>0.305733</td>
+      <td>0.37580</td>
+      <td>0.119933</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.082807</td>
+      <td>0.043587</td>
+      <td>0.17653</td>
+      <td>0.076224</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.430000</td>
+      <td>0.200000</td>
+      <td>0.10000</td>
+      <td>0.010000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.510000</td>
+      <td>0.280000</td>
+      <td>0.16000</td>
+      <td>0.030000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.580000</td>
+      <td>0.300000</td>
+      <td>0.43500</td>
+      <td>0.130000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>0.640000</td>
+      <td>0.330000</td>
+      <td>0.51000</td>
+      <td>0.180000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>0.790000</td>
+      <td>0.440000</td>
+      <td>0.69000</td>
+      <td>0.250000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14980,7 +14988,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[405]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -14998,7 +15006,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[405]:</div>
 
 
 
@@ -15025,7 +15033,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[406]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="p">{</span><span class="s1">&#39;genero&#39;</span> <span class="p">:</span> <span class="n">genero</span><span class="p">}</span> <span class="p">)</span>
@@ -15042,7 +15050,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[406]:</div>
 
 
 
@@ -15172,7 +15180,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[407]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span> <span class="p">:</span> <span class="s1">&#39;Masculino&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="p">:</span> <span class="s1">&#39;Feminino&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="p">:</span> <span class="s1">&#39;Outro&#39;</span><span class="p">})</span>
@@ -15189,7 +15197,7 @@ Name: sepal length (cm), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[407]:</div>
 
 
 
@@ -15340,7 +15348,7 @@ Name: sepal length (cm), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[408]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">to_replace</span> <span class="o">=</span> <span class="p">{</span>
@@ -15388,7 +15396,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[409]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span> <span class="o">=</span> <span class="n">to_replace</span><span class="p">)</span>
@@ -15405,7 +15413,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[409]:</div>
 
 
 
@@ -15556,7 +15564,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[410]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_categoria_genero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -15580,7 +15588,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[410]:</div>
 
 
 
@@ -15597,7 +15605,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[411]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_categoria_genero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -15617,7 +15625,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[411]:</div>
 
 
 
@@ -15644,7 +15652,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[412]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria_2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_categoria_genero</span><span class="p">)</span>
@@ -15661,7 +15669,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[412]:</div>
 
 
 
@@ -15855,7 +15863,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[413]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -15874,7 +15882,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[413]:</div>
 
 
 
@@ -15994,7 +16002,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[414]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_discretized_idade</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -16017,7 +16025,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[415]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;idade_discretizado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">idade</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_discretized_idade</span><span class="p">)</span>
@@ -16034,7 +16042,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[47]:</div>
+    <div class="prompt output_prompt">Out[415]:</div>
 
 
 
@@ -16226,7 +16234,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[416]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -16296,7 +16304,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[417]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
@@ -16329,7 +16337,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[418]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">intervalos</span> <span class="o">=</span> <span class="p">(</span><span class="n">idade</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">idade</span><span class="p">))</span> <span class="o">//</span> <span class="n">L</span>
@@ -16347,7 +16355,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[78]:</div>
+    <div class="prompt output_prompt">Out[418]:</div>
 
 
 
@@ -16386,11 +16394,11 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[419]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
-<span class="n">Counter</span><span class="p">(</span><span class="n">idade_discretizado</span><span class="p">)</span>
+<span class="n">Counter</span><span class="p">(</span><span class="n">intervalos_largura_fixa</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16403,7 +16411,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[79]:</div>
+    <div class="prompt output_prompt">Out[419]:</div>
 
 
 
@@ -16440,7 +16448,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[420]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
@@ -16494,7 +16502,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[421]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
@@ -16511,7 +16519,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[88]:</div>
+    <div class="prompt output_prompt">Out[421]:</div>
 
 
 
@@ -16528,7 +16536,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[422]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s2">&quot;idade&quot;</span> <span class="p">:</span> <span class="n">idade</span><span class="p">,</span> <span class="s2">&quot;rank&quot;</span> <span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;intervalo&quot;</span> <span class="p">:</span> <span class="n">intervalos_igual_frequencia</span><span class="p">}</span> <span class="p">)</span>
@@ -16545,7 +16553,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[89]:</div>
+    <div class="prompt output_prompt">Out[422]:</div>
 
 
 
@@ -17104,52 +17112,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </li>
 <li><p>Por exemplo, se temos uma variável <em>data de nascimento</em>. Se estamos interessados em analisar o valor da idade, a data de nascimento não será suficiente para um método de aprendizado entender o que nós queremos.</p>
 </li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">nasc</span> <span class="o">&lt;-</span> <span class="n">sample</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="k">as</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;1950/01/01&#39;</span><span class="p">),</span> <span class="k">as</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;2010/01/01&#39;</span><span class="p">),</span> <span class="n">by</span><span class="o">=</span><span class="s2">&quot;day&quot;</span><span class="p">),</span> <span class="mi">20</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
-<span class="n">today</span> <span class="o">&lt;-</span> <span class="n">Sys</span><span class="o">.</span><span class="n">Date</span><span class="p">()</span>
-<span class="n">age</span> <span class="o">&lt;-</span> <span class="n">time_length</span><span class="p">(</span> <span class="n">today</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">,</span> <span class="s2">&quot;years&quot;</span><span class="p">)</span>
-<span class="n">age</span> <span class="o">&lt;-</span> <span class="n">floor</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="c1"># Arredondamento pelo menor inteiro</span>
-<span class="n">head</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">,</span> <span class="n">idade</span> <span class="o">=</span> <span class="n">age</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>A data é um tipo de dado complexo, pois tem várias informações contidas nela.</p>
-</li>
-<li><p>Os algoritmos de aprendizado também não irão saber que nela estão contidos: dia, mês e ano.</p>
-</li>
-<li><p>E muito menos se o mês deve ser representado no formato textual, número inteiro ou representação binária. Portanto, nós devemos informar que tipo de informação queremos representar.</p>
+<li><p>A data é um bom exemplo de tipo de dados complexo, pois tem várias informações contidas nesse tipo de dado e várias informações podem ser extraída a partir dele: idade, ano, mes, dia, estação do ano, dia da semana, final de semana, entre outras.</p>
 </li>
 <li><p>Como já mencionado, os dados podem vir em qualquer formato, e como vão ser usados esses dados para visualização ou por algoritmo de aprendizado, vai depender de quem está realizando o processo de mineração.</p>
 </li>
@@ -17161,48 +17124,32 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Então muitas vezes vamos precisar extrair todas essas informações do dado complexo</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">,</span> 
-                 <span class="n">dia</span><span class="o">.</span><span class="n">do</span><span class="o">.</span><span class="n">mes</span> <span class="o">=</span> <span class="n">mday</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">),</span> 
-                 <span class="n">dia</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">semana</span> <span class="o">=</span> <span class="n">wday</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">),</span> 
-                 <span class="n">dia</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">semana</span><span class="o">.</span><span class="n">extenso</span> <span class="o">=</span> <span class="n">wday</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">T</span><span class="p">),</span> 
-                 <span class="n">mes</span> <span class="o">=</span> <span class="n">month</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">),</span> 
-                 <span class="n">mes</span><span class="o">.</span><span class="n">extenso</span> <span class="o">=</span> <span class="n">month</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">T</span><span class="p">),</span> 
-                 <span class="n">ano</span> <span class="o">=</span> <span class="n">year</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">nasc</span><span class="p">))</span>
-<span class="n">head</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Tratamento-de-Dados-Desconhecidos">Tratamento de Dados Desconhecidos<a class="anchor-link" href="#Tratamento-de-Dados-Desconhecidos">&#182;</a></h2><ul>
 <li><p>Um problema comum em conjunto de dados é a presença de dados desconhecidos</p>
 </li>
 <li><p>Geralmente sinalizados com: ?, NA, ou a ausência de valor mesmo</p>
 </li>
-<li><p>Algumas abordagens comuns:</p>
-<ul>
-<li>Eliminar o exemplo que possui o valor desconhecido</li>
-<li>Substituir o valor de uma variável pelo seu valor esperado de acordo com sua distribuição. Geralmente média ou moda.</li>
-<li>Verificar qual é o exemplo mais parecido no conjunto de dados, em relação aos outros atributos, e usar o valor do exemplo mais parecido</li>
-</ul>
+<li><p>A substituição de um valor ausente ou desconhecido é tambem conhecida como <em>imputação</em> de valores.</p>
 </li>
+<li><p>Bibliografias sobre imputação de valores:</p>
+</li>
+</ul>
+<blockquote><p>CASTRO, Leandro Nunes de. Introdução à mineração de dados: conceitos básicos, algoritmos e aplicações. São Paulo: Saraiva, 2016. 351 p., il. ISBN 9788547200985. Seção 2.3</p>
+<p>Data Mining: Concepts and Techniques, 3rd Edition. Jiawei Han, Micheline Kamber, Jian Pei. Database Modeling and Design: Logical Design, 5th Edition. Capítulo 3</p>
+</blockquote>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Abordagens comuns de acordo com (Castro e Ferrari, 2016):</p>
+<ul>
+<li>Ignorar as instância que possuem um ou mais valores ausentes;</li>
+<li>Imputar manualmente valores ausentes</li>
+<li>Usar uma constante global para putar o valor ausente: para cada atributo escolhe-se um valor para cada atributo</li>
+<li>Imputação do tipo <em>hot-deck</em> ou baseada no objeto mais similar</li>
 </ul>
 
 </div>
@@ -17212,16 +17159,36 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Uma abordagem mais sofisticada é efetuar um aprendizado supervisionado sobre esse atributo para aprender sua relação com os outros atributos.<ul>
+<li>Imputar de acordo com a última obervação: os registros são ordenados de acordo com algum critério razoável para o domínio do problema e o valor ausente é preenchido, baseado no registro imediamente anterior</li>
+<li>Imputar de acordo com a média ou moda do atributo</li>
+<li>Imputar de acordo com a média ou moda do atributo para cada classe: no caso de aprendizado superivsionado
+Imputar de acordo com modelos preditivos</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>usar modelos preditivos consiste em efetuar um aprendizado supervisionado sobre esse atributo para aprender sua relação com os outros atributos:<ul>
 <li>Modelo de classificação, quando o atributo com valor desconhecido é categórico.</li>
 <li>Modelo de regressão, quando o atributo com valor desconhecido é numérico.</li>
 </ul>
 </li>
-<li>Pequisar no Capítulo 3 do livro, as 6 estratégias de tratamento de dados desconhecidos:<blockquote><p>Data Mining: Concepts and Techniques, 3rd Edition. Jiawei Han, Micheline Kamber, Jian Pei. Database Modeling and Design: Logical Design, 5th Edition.</p>
-</blockquote>
-</li>
 <li>Após, usa-se o modelo para predizer o valor desconhecido.</li>
-<li>Por exemplo, no conjunto de dados <em>iris</em>, vamos retirar 10 valores de <em>Sepal.Length</em></li>
+<li>Por exemplo, no conjunto de dados <em>iris</em>, vamos retirar 30 valores da coluna <em>sepal length (cm)</em></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Conjunto de Dados Original</li>
 </ul>
 
 </div>
@@ -17229,12 +17196,511 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[423]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">desconhecidos</span> <span class="o">&lt;-</span> <span class="n">sample</span><span class="p">(</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">iris</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">desconhecidos</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">],</span> <span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[423]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>sepal width (cm)</th>
+      <th>petal length (cm)</th>
+      <th>petal width (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>1.7</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>4.6</td>
+      <td>3.4</td>
+      <td>1.4</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5.0</td>
+      <td>3.4</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4.4</td>
+      <td>2.9</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>4.9</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>5.4</td>
+      <td>3.7</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>4.8</td>
+      <td>3.4</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>4.8</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>4.3</td>
+      <td>3.0</td>
+      <td>1.1</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>5.8</td>
+      <td>4.0</td>
+      <td>1.2</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>5.7</td>
+      <td>4.4</td>
+      <td>1.5</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>1.3</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>5.7</td>
+      <td>3.8</td>
+      <td>1.7</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>5.1</td>
+      <td>3.8</td>
+      <td>1.5</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>5.4</td>
+      <td>3.4</td>
+      <td>1.7</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>5.1</td>
+      <td>3.7</td>
+      <td>1.5</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>4.6</td>
+      <td>3.6</td>
+      <td>1.0</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5.1</td>
+      <td>3.3</td>
+      <td>1.7</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>4.8</td>
+      <td>3.4</td>
+      <td>1.9</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>5.0</td>
+      <td>3.4</td>
+      <td>1.6</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>5.2</td>
+      <td>3.5</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>5.2</td>
+      <td>3.4</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>6.9</td>
+      <td>3.2</td>
+      <td>5.7</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>7.7</td>
+      <td>2.8</td>
+      <td>6.7</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>6.3</td>
+      <td>2.7</td>
+      <td>4.9</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>6.7</td>
+      <td>3.3</td>
+      <td>5.7</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>7.2</td>
+      <td>3.2</td>
+      <td>6.0</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>6.2</td>
+      <td>2.8</td>
+      <td>4.8</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>6.1</td>
+      <td>3.0</td>
+      <td>4.9</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>6.4</td>
+      <td>2.8</td>
+      <td>5.6</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>7.2</td>
+      <td>3.0</td>
+      <td>5.8</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>7.4</td>
+      <td>2.8</td>
+      <td>6.1</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>7.9</td>
+      <td>3.8</td>
+      <td>6.4</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>6.4</td>
+      <td>2.8</td>
+      <td>5.6</td>
+      <td>2.2</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>6.3</td>
+      <td>2.8</td>
+      <td>5.1</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>6.1</td>
+      <td>2.6</td>
+      <td>5.6</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>7.7</td>
+      <td>3.0</td>
+      <td>6.1</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>6.3</td>
+      <td>3.4</td>
+      <td>5.6</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>6.4</td>
+      <td>3.1</td>
+      <td>5.5</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>4.8</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>6.9</td>
+      <td>3.1</td>
+      <td>5.4</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>6.7</td>
+      <td>3.1</td>
+      <td>5.6</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>6.9</td>
+      <td>3.1</td>
+      <td>5.1</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>5.8</td>
+      <td>2.7</td>
+      <td>5.1</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>6.8</td>
+      <td>3.2</td>
+      <td>5.9</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>6.7</td>
+      <td>3.3</td>
+      <td>5.7</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>6.2</td>
+      <td>3.4</td>
+      <td>5.4</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>5.9</td>
+      <td>3.0</td>
+      <td>5.1</td>
+      <td>1.8</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Índices para remover (<em>to_remove</em>) escolhidos aleatoriamente:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[424]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">to_remove</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">150</span><span class="p">),</span> <span class="mi">30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">to_remove</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -17250,12 +17716,8 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-90-a7f7915e9917&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">2</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    desconhecidos &lt;- sample( x = 1:nrow(iris), size = 10, replace = F)</span>
-<span class="ansi-white-intense-fg ansi-bold">                                  ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[34, 145, 16, 65, 30, 126, 115, 120, 97, 53, 24, 124, 7, 99, 110, 0, 114, 68, 58, 26, 81, 137, 5, 3, 83, 69, 1, 142, 112, 48]
 </pre>
 </div>
 </div>
@@ -17263,14 +17725,26 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Armazenamos em uma variável os valores antes de serem removidos</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[425]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my</span><span class="o">.</span><span class="n">iris</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">iris</span><span class="p">)[,</span><span class="o">.</span><span class="p">(</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span><span class="p">,</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Width</span><span class="p">,</span><span class="n">Petal</span><span class="o">.</span><span class="n">Length</span><span class="p">,</span><span class="n">Petal</span><span class="o">.</span><span class="n">Width</span><span class="p">)]</span>
-<span class="n">my</span><span class="o">.</span><span class="n">iris</span><span class="err">$</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span><span class="p">[</span><span class="n">desconhecidos</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="n">NA</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing_true</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">to_remove</span><span class="p">,</span><span class="s1">&#39;petal length (cm)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">missing_true</span><span class="p">)</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">to_remove</span><span class="p">,</span><span class="s1">&#39;petal length (cm)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 
     </div>
@@ -17286,12 +17760,9 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-91-40e4c53c693c&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    my.iris &lt;- data.table(iris)[,.(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width)]</span>
-<span class="ansi-white-intense-fg ansi-bold">                                ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1.5 5.2 1.3 4.4 1.6 4.8 5.3 5.7 4.3 4.  1.9 5.7 1.5 4.1 5.1 1.4 5.1 4.5
+ 4.6 1.6 3.7 5.5 1.7 1.5 5.1 3.9 1.4 5.1 5.5 1.5]
 </pre>
 </div>
 </div>
@@ -17304,7 +17775,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Construímos um modelo preditivo para o atributo <em>Sepal.Length</em></li>
+<li>Conjunto de dados, com valores removidos</li>
 </ul>
 
 </div>
@@ -17312,36 +17783,487 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[426]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">&lt;-</span> <span class="n">lm</span><span class="p">(</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span> <span class="o">~</span> <span class="o">.</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">my</span><span class="o">.</span><span class="n">iris</span><span class="p">[</span><span class="o">-</span><span class="n">desconhecidos</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[426]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>sepal width (cm)</th>
+      <th>petal length (cm)</th>
+      <th>petal width (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>NaN</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>NaN</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>NaN</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>4.6</td>
+      <td>3.4</td>
+      <td>1.4</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5.0</td>
+      <td>3.4</td>
+      <td>NaN</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4.4</td>
+      <td>2.9</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>4.9</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>5.4</td>
+      <td>3.7</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>4.8</td>
+      <td>3.4</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>4.8</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>4.3</td>
+      <td>3.0</td>
+      <td>1.1</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>5.8</td>
+      <td>4.0</td>
+      <td>1.2</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>5.7</td>
+      <td>4.4</td>
+      <td>1.5</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>NaN</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>5.7</td>
+      <td>3.8</td>
+      <td>1.7</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>5.1</td>
+      <td>3.8</td>
+      <td>1.5</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>5.4</td>
+      <td>3.4</td>
+      <td>1.7</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>5.1</td>
+      <td>3.7</td>
+      <td>1.5</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>4.6</td>
+      <td>3.6</td>
+      <td>1.0</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5.1</td>
+      <td>3.3</td>
+      <td>1.7</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>4.8</td>
+      <td>3.4</td>
+      <td>NaN</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>5.0</td>
+      <td>3.4</td>
+      <td>NaN</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>5.2</td>
+      <td>3.5</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>5.2</td>
+      <td>3.4</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>6.9</td>
+      <td>3.2</td>
+      <td>NaN</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>7.7</td>
+      <td>2.8</td>
+      <td>6.7</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>6.3</td>
+      <td>2.7</td>
+      <td>4.9</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>6.7</td>
+      <td>3.3</td>
+      <td>NaN</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>7.2</td>
+      <td>3.2</td>
+      <td>6.0</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>6.2</td>
+      <td>2.8</td>
+      <td>NaN</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>6.1</td>
+      <td>3.0</td>
+      <td>4.9</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>6.4</td>
+      <td>2.8</td>
+      <td>5.6</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>7.2</td>
+      <td>3.0</td>
+      <td>5.8</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>7.4</td>
+      <td>2.8</td>
+      <td>6.1</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>7.9</td>
+      <td>3.8</td>
+      <td>6.4</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>6.4</td>
+      <td>2.8</td>
+      <td>5.6</td>
+      <td>2.2</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>6.3</td>
+      <td>2.8</td>
+      <td>5.1</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>6.1</td>
+      <td>2.6</td>
+      <td>5.6</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>7.7</td>
+      <td>3.0</td>
+      <td>6.1</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>6.3</td>
+      <td>3.4</td>
+      <td>5.6</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>6.4</td>
+      <td>3.1</td>
+      <td>NaN</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>4.8</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>6.9</td>
+      <td>3.1</td>
+      <td>5.4</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>6.7</td>
+      <td>3.1</td>
+      <td>5.6</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>6.9</td>
+      <td>3.1</td>
+      <td>5.1</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>5.8</td>
+      <td>2.7</td>
+      <td>NaN</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>6.8</td>
+      <td>3.2</td>
+      <td>5.9</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>6.7</td>
+      <td>3.3</td>
+      <td>5.7</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>6.2</td>
+      <td>3.4</td>
+      <td>5.4</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>5.9</td>
+      <td>3.0</td>
+      <td>5.1</td>
+      <td>1.8</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 4 columns</p>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Usamos esse modelo para predizer os valores desconhecidos de <em>Sepal.Length</em> </li>
-</ul>
+</div>
 
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">my</span><span class="o">.</span><span class="n">iris</span><span class="p">[</span><span class="n">desconhecidos</span><span class="p">,])</span>
-</pre></div>
 
-    </div>
 </div>
 </div>
 
@@ -17350,7 +18272,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Comparamos os valores preditos com os observados</li>
+<li>Vamos separar as instâncias que conhecemos os valores de todos os atributos (<em>train</em>) e as instâncias que possuem os valores ausentes (<em>missing</em>)</li>
 </ul>
 
 </div>
@@ -17358,15 +18280,96 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[427]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">observed</span> <span class="o">&lt;-</span> <span class="n">iris</span><span class="err">$</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span><span class="p">[</span><span class="n">desconhecidos</span><span class="p">]</span>
-<span class="n">results</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">predicted</span><span class="p">,</span> <span class="n">observed</span><span class="p">)</span>
-<span class="n">head</span><span class="p">(</span><span class="n">results</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">to_remove</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">missing</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">to_remove</span><span class="p">,:]</span>
+<span class="n">missing</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[427]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>sepal width (cm)</th>
+      <th>petal length (cm)</th>
+      <th>petal width (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>34</th>
+      <td>4.9</td>
+      <td>3.1</td>
+      <td>NaN</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>NaN</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>6.7</td>
+      <td>3.1</td>
+      <td>NaN</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>4.8</td>
+      <td>3.1</td>
+      <td>NaN</td>
+      <td>0.2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -17375,51 +18378,1172 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Verificamos se o nosso modelo foi melhor do que um modelo de substituição pela média</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean</span><span class="o">.</span><span class="n">predictor</span> <span class="o">&lt;-</span> <span class="n">mean</span><span class="p">(</span><span class="n">my</span><span class="o">.</span><span class="n">iris</span><span class="err">$</span><span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span><span class="p">[</span><span class="o">-</span><span class="n">desconhecidos</span><span class="p">])</span>
-
-<span class="n">dt</span> <span class="o">&lt;-</span> <span class="n">results</span><span class="p">[,</span><span class="o">.</span><span class="p">(</span><span class="n">observed</span><span class="p">,</span> <span class="n">error</span><span class="o">.</span><span class="n">my</span><span class="o">.</span><span class="n">predictor</span> <span class="o">=</span> <span class="n">observed</span> <span class="o">-</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">error</span><span class="o">.</span><span class="n">mean</span><span class="o">.</span><span class="n">predictor</span> <span class="o">=</span> <span class="n">observed</span> <span class="o">-</span> <span class="n">mean</span><span class="o">.</span><span class="n">predictor</span><span class="p">)]</span>
-
-<span class="n">dt</span><span class="p">[,</span><span class="o">.</span><span class="p">(</span><span class="n">EMQ</span><span class="o">.</span><span class="n">my</span><span class="o">.</span><span class="n">predictor</span>   <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">my</span><span class="o">.</span><span class="n">predictor</span><span class="o">^</span><span class="mi">2</span>  <span class="p">),</span> 
-      <span class="n">EMQ</span><span class="o">.</span><span class="n">mean</span><span class="o">.</span><span class="n">predictor</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">mean</span><span class="o">.</span><span class="n">predictor</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span> <span class="p">)]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Isso indica que o Erro Médio Quadrático (EMQ) do preditor reduziu o erro da média de 0.72 para 0.15. </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Podemos caluclar a redução de erro relativa:</li>
-</ul>
-$$\frac{0.72-0.15}{0.72} = 0.79$$<ul>
-<li><p>E verificar uma redução de erro de $79\%$ usando o nosso modelo, em relação a usar apenas o valor da média</p>
+<li><p>A partir do conjunto <em>train</em> vamos construir uma regressão para predizer a variável resposta ou <em>target</em> 'sepal length (cm)' utilizando os outros três atributos.</p>
 </li>
-<li><p>Entre essas duas abordagens, a utilização de nosso modelo preditivo é preferível para preencher os dados desconhecidos no conjunto de dados, embora exista um EMQ de $0.15$.</p>
+<li><p>Ajustar uma função na forma $y = f(X)$,</p>
+<ul>
+<li>$y$ é a variável resposta ou <em>target</em>. <code>y_train</code> representa $y$.</li>
+<li>$X$ são outros três atributos que <em>podem</em> nos ajudar a prever $y$. <code>X_train</code> representa <code>X</code>.</li>
+</ul>
 </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[428]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;petal length (cm)&#39;</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Instanciamos um regressor linear e ajustamos a regressão aos dados.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[429]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[429]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[430]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Coeficientes: &#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Intercepto: &#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Coeficientes:  [ 0.70969251 -0.62139171  1.50256363]
+Intercepto:  -0.27128316566803523
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[431]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">regression_to_equation</span> <span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">coefs</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">nround</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="n">coefs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">coefs</span><span class="p">,</span> <span class="n">nround</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>    
+    <span class="n">intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">intercept</span><span class="p">,</span> <span class="n">nround</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>    
+    <span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[(</span><span class="n">coef</span> <span class="o">+</span> <span class="s1">&#39; x &#39;</span><span class="o">+</span> <span class="n">column</span><span class="p">)</span> <span class="k">for</span> <span class="n">column</span><span class="p">,</span> <span class="n">coef</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">coefs</span><span class="p">)]</span> <span class="p">)</span>        
+    <span class="k">return</span> <span class="s1">&#39;y = &#39;</span> <span class="o">+</span> <span class="n">str1</span> <span class="o">+</span> <span class="s1">&#39; + &#39;</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[432]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">regression_to_equation</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[432]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;y = 0.71 x sepal length (cm) + -0.621 x sepal width (cm) + 1.503 x petal width (cm) + -0.271&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Agora vamos tentar adivinhar os valores ausentes</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[433]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_missing</span> <span class="o">=</span> <span class="n">missing</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">y_missing_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_missing</span><span class="p">)</span>
+<span class="n">y_missing_pred</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[433]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1.58040857, 6.07537789, 1.73865418, 4.66093145, 1.50943932,
+       5.09352816, 5.7381918 , 6.09303805, 4.28010717, 4.15615744,
+       1.3230218 , 5.58844765, 1.46496031, 3.98740009, 5.35839196,
+       1.47379039, 5.71118934, 5.0155941 , 4.56398418, 1.76547303,
+       3.64324918, 5.04904915, 1.73865418, 1.36750081, 4.7132161 ,
+       3.80233562, 1.64254774, 5.02204669, 5.84583442, 1.49145055])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[434]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing_true</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[434]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1.5, 5.2, 1.3, 4.4, 1.6, 4.8, 5.3, 5.7, 4.3, 4. , 1.9, 5.7, 1.5,
+       4.1, 5.1, 1.4, 5.1, 4.5, 4.6, 1.6, 3.7, 5.5, 1.7, 1.5, 5.1, 3.9,
+       1.4, 5.1, 5.5, 1.5])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Comparamos os valores preditos com os observados (aqueles que nós removemos inicialmente)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[435]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s1">&#39;missing_true&#39;</span><span class="p">:</span> <span class="n">missing_true</span><span class="p">,</span> <span class="s1">&#39;y_missing_pred&#39;</span> <span class="p">:</span> <span class="n">y_missing_pred</span> <span class="p">})</span>
+<span class="n">results</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[435]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>missing_true</th>
+      <th>y_missing_pred</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.5</td>
+      <td>1.580409</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5.2</td>
+      <td>6.075378</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.3</td>
+      <td>1.738654</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.4</td>
+      <td>4.660931</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.6</td>
+      <td>1.509439</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>4.8</td>
+      <td>5.093528</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>5.3</td>
+      <td>5.738192</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5.7</td>
+      <td>6.093038</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4.3</td>
+      <td>4.280107</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>4.0</td>
+      <td>4.156157</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1.9</td>
+      <td>1.323022</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5.7</td>
+      <td>5.588448</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>1.5</td>
+      <td>1.464960</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>4.1</td>
+      <td>3.987400</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>5.1</td>
+      <td>5.358392</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>1.4</td>
+      <td>1.473790</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>5.1</td>
+      <td>5.711189</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>4.5</td>
+      <td>5.015594</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>4.6</td>
+      <td>4.563984</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>1.6</td>
+      <td>1.765473</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>3.7</td>
+      <td>3.643249</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>5.5</td>
+      <td>5.049049</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>1.7</td>
+      <td>1.738654</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>1.5</td>
+      <td>1.367501</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>5.1</td>
+      <td>4.713216</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>3.9</td>
+      <td>3.802336</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>1.4</td>
+      <td>1.642548</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>5.1</td>
+      <td>5.022047</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>5.5</td>
+      <td>5.845834</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>1.5</td>
+      <td>1.491451</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Visualização usando Scatter Plot</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[436]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;missing_true&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;y_missing_pred&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[436]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a5e5b2b2e8&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXkAAAEHCAYAAABLKzaMAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4xLjEsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy8QZhcZAAAWJElEQVR4nO3df5BldXnn8ffTTDtDGBCcGU1gwBEnK6suDNjrrhnjhtEkatipRaKmFGuXTUllkyiUbIZgpVS2Km5JLBLYpBKJVILxR4o4EkmiBCISghuRHjIMP4asWQJhwIRhlh/TONPMTD/7xz3t9PT0vX26+557zz33/arqmu577r3fp27VfPrb3/Oc74nMRJLUTCP9LkCSVB1DXpIazJCXpAYz5CWpwQx5SWqwZf0uYKbVq1fnunXr+l2GJA2Ubdu2PZ2Za+Y6VquQX7duHePj4/0uQ5IGSkQ81u6YyzWS1GCGvCQ1mCEvSQ1myEtSgxnyktRghrwkNZghL2ko7ZmY5L7Hn2XPxGS/S6m0llr1yUtSL3x1+xNcvnUHoyMjHJia4qoLzmTzhlMaWYszeUlDZc/EJJdv3cH+A1PsnTzI/gNTbNm6oy8z+l7UUnnIR8SJEfHliHg4InZGxJuqHlOS2tn1zD5GR46MvtGREXY9s6+RtfRiueYa4JbM/NmIeAnwQz0YU5LmtPakYzkwNXXEYwemplh70rGNrKXSmXxEnAC8BbgeIDNfzMxnqxxTkjpZtXI5V11wJitGRzh++TJWjI5w1QVnsmrl8kbWUvVM/nRgN/AHEXEWsA24JDNfqHhcSWpr84ZT2Lh+Nbue2cfak47tS8D3qpaq1+SXAecAv5uZZwMvAL868wkRcXFEjEfE+O7duysuR5JaVq1czlmnntjXgO9FLVWH/C5gV2beXfz8ZVqh/wOZeV1mjmXm2Jo1c26HLElapEpDPjP/GXg8Il5TPPRW4KEqx5QkHdaL7poPAV8oOmseAS7qwZiS1HN7JiZrsc4/U+Uhn5nbgbGqx5GkfqrTVbQzecWrJC1Rna6inc2Ql6QlqtNVtLMZ8pI0y0J3hazTVbSzuQulJM2wmLX16StXt8x6XR1Ovhrykhprod0uM9fW99OamW/ZuoON61fP+/o6XUU7kyEvqZEWMyOfXlufDng4vLZeJrRXrVxem3Cf5pq8pMZZbLdLndfWF8uQl9Q4i+12qdMOld3ico2kxlnKjLyua+uL5UxeUuMsdUbe6x0qvZG3JC3QoMzIq94OwZCX1Fh17HaZaSktm2W5XCNJfdKL7RAMeUnqk4G/kbckqb0m3MhbktRB1SeIDXlJ6rMqTxC7XCNJDWbIS2qsKi8yGhQu10hqpLrec7XXnMlLapw633O11wx5SY1T53uu9pohL6lxmrgv/GIZ8pIap4n7wi+WJ14lNdKg7EJZNUNeUmPVfRfKXnC5RpIazJCXpAYz5CWpwQx5SbXhNgTd54lXSbXgNgTVcCYvqe+asg1BHf8ScSYvaVH2TEx2rQd9ehuC6ZtZw+FtCJby3t2scT51/Uuk8pCPiEeBvcAh4GBmjlU9pqRqdTvQqtiGoJehO/MvkelfVFu27mDj+tV979Pv1XLNuZm5wYCXBl8VSyvd3oag18s/dd4QzeUaSQtS1dJKN7chqKrGduq8IVovZvIJ3BoR2yLi4tkHI+LiiBiPiPHdu3f3oBxJS1FloK1auZyzTj1xyUHc69Ct84ZokZnVDhBxcmY+GREvB24DPpSZd8713LGxsRwfH6+0HklLd/P2J9hSw5OMM/Wjxl6e6J0pIra1Ww6vPORnFfIJYCIzPz3XcUNeGhz9CrSFGIQau6FTyFe6Jh8RxwEjmbm3+P6ngP9R5ZiSemMQdngchBqrVvWJ11cAN0XE9FhfzMxbKh5TklSoNOQz8xHgrCrHkCS157YGktRghrwkNZghL0kNZshLaqw67grZa25rIKmR6rorZK85k5fU1qDOhJuyP303OJOXNKdBngn3eoOyOnMmL+kogz4TrvOukL1myEs6Sp33Ry+jzrtC9prLNZKOstSZcB02Buvm/vSDzJCXdJTpmfDsrXrLBGWd1vLdoMyQl9TGYmbCdb7X6bDqGPIR8ZFOxzPz6u6WI6lOFjoTtqulfuabyR9f/Psa4N8CNxc//0dgzrs7SRpedrXUT8fumsy8MjOvBFYD52TmZZl5GfAGYG0vCpQ0OOxqqZ+ya/KnAS/O+PlFYF3Xq5E08OxqqZeyIf9HwHci4iYggfOBz1VWlaSBZldLfZQK+cz89Yj4OvDjxUMXZebfVVeWJKkbFnLF6w8Bz2fmNcCuiHhVRTVJkrqkVMhHxMeBy4EriodGgc9XVZQkqTvKzuTPBzYDLwBk5pMcbq+UJNVU2ZB/MTOT1klXIuK46kqS1EuDume8yinbXXNjRHwGODEiPgj8V+D3qytLUi/UaZ8ZVaNsd82nI+IngedpXf36scy8rdLKJFXKfWaGw7whHxHHAH+ZmW8DDHapIdxnZjjMuyafmYeA70fES3tQj6QecZ+Z4VB2TX4/cH9E3EbRYQOQmR+upCpJc+rmzTiWsme8BkfZkP+L4ktSn1RxktR9Zpqv7InXGyLiJcAZtNoo/z4zX5znZZK6pMqTpO4z02xlr3h9J/B/gWuB3wb+ISLeUWVhkg4b9Btrq3/KLtdcDZybmf8AEBGvprV88/WqCpN0mCdJtVhlr3h9ajrgC48AT1VQj6Q5eDMOLVbZmfyDEfE14EZaa/LvBu6JiHcBZOZXOr246LUfB57IzPOWUK80tDxJqsUoG/IrgH8B/kPx827gZbTu9ZpAx5AHLgF2AicsokZJhU4nSbvZXqnmKNtdc1Gn4xFxRWb+zzbH1gI/A/w68JEFVyhpXu5Bo3YWctOQTt7d4dhvAVuAqbkORsTFETEeEeO7d+/uUjnS8JjZXrl38iD7D0yxZesOd5UU0L2QjzkfjDiP1knbbe1emJnXZeZYZo6tWbOmS+VIw8P2SnXSrZDPNo9vBDZHxKPAHwObIsI7SkldZHulOql0Jp+ZV2Tm2sxcB/wccHtmXtilMSVhe6U6K9tdM58/6dL7SFoE2yvVTqmQj4hr53j4OWA8M7+amZ+c7z0y8w7gjgVVJw2hxbZCugeN5rKQPvkzODxjvwB4EPj5iDg3My+tojhp2NgKqW4rG/LrgU2ZeRAgIn4XuBX4SeD+imqThoq341MVyp54PQU4bsbPxwEnF3eNshlX6gJbIVWFsjP5q4DtEXEHrU6atwCfjIjjgL+qqDZpqNgKqSqUmsln5vXAjwF/Wny9OTM/m5kvZOavVFmgNCxshVQVFtJCOUJrY7JlwPqIWJ+Zd1ZTljScbIVUt5VtofwU8F5aHTXTf08mYMhLHSymHdJWSHVT2Zn8fwJek5meZJVKsh1SdVC2u+YRYLTKQqQmcWdI1UXZmfz3aXXXfIMZLZOZ+eFKqpIG3HQ75P4ZO2xPt0O6FKNeKhvyNxdfkkqwHVJ1UfbOUDdUXYjUJNPtkFtmrck7i1evdQz5iLgxM98TEfdz5J7xAWRmnllpddIAsx1SdTDfTP6S4t/zqi5EaiLbIdVvHbtrMvN7xbdPA49n5mPAcuAs4MmKa5MkLVHZFso7gRURcQrwDeAi4A+rKkqS1B1lQz4y8/vAu4D/lZnnA6+trixJUjeUDvmIeBPwfuAvise6detASVJFyob8pcAVwE2Z+WBEnA58s7qyJEndULZP/q+BvwaIiBHgaa92laT6KzWTj4gvRsQJxU1CHgL+PiLcR16Saq7scs1rM/N5WrtRfg04DfhAZVVJkrqibMiPRsQorZD/amYe4MgrYCVJNVQ25D8DPErrBt53RsQrgeerKkqS1B1lT7xeC1w746HHIuLcakqSJHXLfBuUXZiZn4+Ij7R5ytUV1CRJ6pL5ZvLHFf8eX3UhkqTu6xjymfmZ4t8re1OOJKmbSq3JR8SrgA8B62a+JjM3V1OWJKkbyu4/86fA9cCfAVPzPFeSVBNlQ35/0WEjSRogZUP+moj4OHArMDn9YGbeW0lVkqSuKBvy/4bWNgabOLxck8XPbUXEClo3HFlejPXlzPz44kqVJC1U2ZA/Hzg9M19c4PtPApsyc6LYFuGuiPh6Zn57ge8jSVqEstsa3AecuNA3z5aJ4sfR4ss9bySpR8rO5F8BPBwR93Dkmvy8LZQRcQywDVgP/E5m3j3r+MXAxQCnnXZayXIkSWWUDflFr6Nn5iFgQ0ScCNwUEa/PzAdmHL8OuA5gbGzMWb4kddFC7gzVVkT8bWa+aZ73eDYi7gDeDjzQ6bmSpO4ouyY/nxVzPRgRa4oZPBFxLPA24OEujSlJmkfZ5Zr5tFtm+RHghmJdfgS4MTP/vEtjSpLm0a2Qn1Nm7gDOrnIMSVJ7ZW/k/csRcVKnp3SpHklSF5Vdk/9h4J6IuDEi3h4Rs0Pdm3pLUg2VCvnM/DXgR2ntRPlfgO9GxCcj4tXFcbtlJKmGSnfXZGYC/1x8HQROAr4cEVdVVJskaYnK3jTkw8B/Bp4GPgv8SmYeiIgR4LvAlupKlCQtVtnumtXAuzLzsZkPZuZURJzX/bIkSd1Q9orXj3U4trN75UiSuqlbV7xKkmrIkJekBjPkJanBDHlJajBDXpIazJCXpAYz5CWpwQx5SWowQ16SGsyQl6QGM+QlqcEMeUlqMENekhrMkJekBjPkJanBDHlJajBDXpIazJCXpAYz5CWpwQx5SWowQ16SGsyQl6QGM+QlqcEMeUlqMENekhqs0pCPiFMj4psRsTMiHoyIS6ocT5J0pGUVv/9B4LLMvDcijge2RcRtmflQxeNKkqh4Jp+Z38vMe4vv9wI7gVOqHFOSdFjP1uQjYh1wNnB3r8aUpGHXk5CPiJXAVuDSzHx+1rGLI2I8IsZ3797di3IkaWhUHvIRMUor4L+QmV+ZfTwzr8vMscwcW7NmTdXlSNJQqbq7JoDrgZ2ZeXWVY0mSjlb1TH4j8AFgU0RsL77eWfGYkqRCpS2UmXkXEFWOIUlqzyteJanBDPkO9kxMct/jz7JnYrLfpUjSolR9xWvP7JmYZNcz+1h70rGsWrl8ye/31e1PcPnWHYyOjHBgaoqrLjiTzRsOX8fV7fEkqQqNCPn5Anmh9kxMcvnWHew/MMV+pgDYsnUHG9evZtXK5V0fT5KqMvDLNTMDee/kQfYfmGLL1h1LWmLZ9cw+RkeO/GhGR0bY9cy+SsaTpKoMfMh3CuTFWnvSsRyYmjrisQNTU6w96dhKxpOkqgx8yHcK5GkLPYG6auVyrrrgTFaMjnD88mWsGB3hqgvOZNXK5aXGk6S6GPg1+elA3jJrjXz6ZOhi1883bziFjetXH3Vydb7xJKlOIjP7XcMPjI2N5fj4+KJeO1e3y56JSTZ+6nb2Hzg8814xOsK3Lt+05FC2u0ZSXUTEtswcm+vYwM/kp61aufyosJ1eP5/ukIHD6+czfxEsJqznGk+S6qYxIT+X+dbPbYWU1HQDf+K1k04nUG2FlDQMGj2Th/YnUKtcypGkumh8yLfjUo6kYdDo5RpohfXGT93OhZ+9m42fup2btz8BtJZy3vOGtUc89z1ja13KkdQojQ75TmG9Z2KSL93z+BHP/9J3Hv/BEo1XtUpqgkYv13Rad39u34scOHTkNQIHDiUPPvkcrzv5pV7VKqkRGj2T77zu3u6GVdGxK0eSBkmjZ/KdtiB43cknsGwEDs74HbBsBF538glA+64cSRokjQ556LwHzfveeBqf+/Y//eC57/t3px0R5l7VKmnQNXq5Ztqqlcs569QTjwjsPROT3Lht1xHPu3F8V+UdNN5SUFIvNX4m306Zi6G6zd57Sb02FDP5ufR6X3h77yX1w9CGfK87aOy9l9QPQ7tcA73toPGOUpL6YWhn8tPmOilb1Tj23kvqtaGeyfeavfeSes2Q7zF77yX10tAv10hSkxnyktRghrwkNZghL0kNZshLUoNFZs7/rB6JiN3AY/2uo49WA0/3u4ia8TM5mp/J0Yb9M3llZq6Z60CtQn7YRcR4Zo71u4468TM5mp/J0fxM2nO5RpIazJCXpAYz5Ovlun4XUEN+JkfzMzman0kbrslLUoM5k5ekBjPkJanBDPkaiIhTI+KbEbEzIh6MiEv6XVO/RcSKiPhORNxXfCZX9rumuoiIYyLi7yLiz/tdSx1ExKMRcX9EbI+I8X7XUzduNVwPB4HLMvPeiDge2BYRt2XmQ/0urI8mgU2ZORERo8BdEfH1zPx2vwurgUuAncAJ/S6kRs7NzGG+GKotZ/I1kJnfy8x7i+/30voPfEp/q+qvbJkofhwtvoa+SyAi1gI/A3y237VoMBjyNRMR64Czgbv7W0n/FcsS24GngNsyc+g/E+C3gC3A1HxPHCIJ3BoR2yLi4n4XUzeGfI1ExEpgK3BpZj7f73r6LTMPZeYGYC3wxoh4fb9r6qeIOA94KjO39buWmtmYmecA7wB+KSLe0u+C6sSQr4li3Xkr8IXM/Eq/66mTzHwWuAN4e59L6beNwOaIeBT4Y2BTRHy+vyX1X2Y+Wfz7FHAT8Mb+VlQvhnwNREQA1wM7M/PqftdTBxGxJiJOLL4/Fngb8HB/q+qvzLwiM9dm5jrg54DbM/PCPpfVVxFxXNGsQEQcB/wU8EB/q6oXu2vqYSPwAeD+Yg0a4KOZ+bU+1tRvPwLcEBHH0JqM3JiZtgxqtlcAN7XmSSwDvpiZt/S3pHpxWwNJajCXaySpwQx5SWowQ16SGsyQl6QGM+QlqcEMeUlqMENejRMRmyPiVxfxuv/d5Tp+IiJ+rJvvKS2UffJSRSLiE8BEZn56jmPLMvNg76vSsDHkNVCKXTpvAe4C/j1wH/AHwJXAy4H3A68FxjLzlyPi3cDHgUPAc5n5loh4XfGal9D6a/aCzPxuRExk5sqI+AngE8DTwOuBbcCFmZkR8U7g6uLYvcDpmXlemzq/XYy7G/gQ8PPA/6O1y+i9wF5m/BKIiAeA8zLz0Yi4EPhwUePdwC9m5qEufIQaMi7XaBCtB64BzgTOAN4HvBn478BHZz33Y8BPZ+ZZwObisV8Aril2uBwDds0xxtnApbR+YZwObIyIFcBngHdk5puBNe0KzMxHgd8DfjMzN2Tm3xSH/hXwtsy8rN1rI+JfA++ltbviBlq/KN7f7vlSJ4a8BtE/Zub9mTkFPAh8I1t/kt4PrJv13G8BfxgRHwSOKR77W+CjEXE58MrM3DfHGN/JzF3FGNuL9z0DeCQz/7F4zpcWUfuflJiRvxV4A3BPsZfRW2n9opEWzJDXIJqc8f3UjJ+nmLXpXmb+AvBrwKnA9ohYlZlfpDWr3wf8ZURsmmeMQ8X7Rhdqf2HG9wc58v/giuLfAG4o/gLYkJmvycxPdGFsDSFDXo0WEa/OzLsz82O01tFPjYjTac3IrwVuprXsU8bDwOnFeju0llQ62Qsc3+H4o8A5RZ3nAK8qHv8G8LMR8fLi2Msi4pUla5SOYMir6X4jIu4vTmreSetE7XuBB4qlkDOAz5V5o2JZ5xeBWyLiLuBfgOc6vOTPgPMjYntE/Pgcx7cCLyvq+G/A/ynGeYjWXx+3RsQO4DZaWy9LC2Z3jbQAEbEyMyeKG738DvDdzPzNftclteNMXlqYDxYz7weBl9LqtpFqy5m8tEQRcRFwyayHv5WZv9SPeqSZDHlJajCXaySpwQx5SWowQ16SGsyQl6QG+/9xP4MISwO4wgAAAABJRU5ErkJggg==
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Coeficiente de Correlação de Pearson, $R$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[437]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;missing_true&#39;</span><span class="p">],</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;y_missing_pred&#39;</span><span class="p">])</span> 
+<span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[437]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.9850004515270024</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Coeficiente de Determinação, $R^2$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[438]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[438]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.9702258895083987</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Erro Médio Quadrático, $EMQ$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[443]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;missing_true&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;y_missing_pred&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[443]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.10559228954055062</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Imputação dos valores ausentes no conjunto de dados</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[439]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span> <span class="n">target</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">predicted</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[440]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[440]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal length (cm)</th>
+      <th>sepal width (cm)</th>
+      <th>petal length (cm)</th>
+      <th>petal width (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>1.7</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>4.6</td>
+      <td>3.4</td>
+      <td>1.4</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5.0</td>
+      <td>3.4</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4.4</td>
+      <td>2.9</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>4.9</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>5.4</td>
+      <td>3.7</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>4.8</td>
+      <td>3.4</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>4.8</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>4.3</td>
+      <td>3.0</td>
+      <td>1.1</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>5.8</td>
+      <td>4.0</td>
+      <td>1.2</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>5.7</td>
+      <td>4.4</td>
+      <td>1.5</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>1.7</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>5.7</td>
+      <td>3.8</td>
+      <td>1.7</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>5.1</td>
+      <td>3.8</td>
+      <td>1.5</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>5.4</td>
+      <td>3.4</td>
+      <td>1.7</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>5.1</td>
+      <td>3.7</td>
+      <td>1.5</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>4.6</td>
+      <td>3.6</td>
+      <td>1.0</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5.1</td>
+      <td>3.3</td>
+      <td>1.7</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>4.8</td>
+      <td>3.4</td>
+      <td>1.3</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>5.0</td>
+      <td>3.4</td>
+      <td>1.8</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>5.2</td>
+      <td>3.5</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>5.2</td>
+      <td>3.4</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.6</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>6.9</td>
+      <td>3.2</td>
+      <td>6.1</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>7.7</td>
+      <td>2.8</td>
+      <td>6.7</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>6.3</td>
+      <td>2.7</td>
+      <td>4.9</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>6.7</td>
+      <td>3.3</td>
+      <td>5.6</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>7.2</td>
+      <td>3.2</td>
+      <td>6.0</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>6.2</td>
+      <td>2.8</td>
+      <td>5.1</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>6.1</td>
+      <td>3.0</td>
+      <td>4.9</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>6.4</td>
+      <td>2.8</td>
+      <td>5.6</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>7.2</td>
+      <td>3.0</td>
+      <td>5.8</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>7.4</td>
+      <td>2.8</td>
+      <td>6.1</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>7.9</td>
+      <td>3.8</td>
+      <td>6.4</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>6.4</td>
+      <td>2.8</td>
+      <td>5.6</td>
+      <td>2.2</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>6.3</td>
+      <td>2.8</td>
+      <td>5.1</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>6.1</td>
+      <td>2.6</td>
+      <td>5.6</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>7.7</td>
+      <td>3.0</td>
+      <td>6.1</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>6.3</td>
+      <td>3.4</td>
+      <td>5.6</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>6.4</td>
+      <td>3.1</td>
+      <td>5.0</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>4.8</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>6.9</td>
+      <td>3.1</td>
+      <td>5.4</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>6.7</td>
+      <td>3.1</td>
+      <td>5.6</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>6.9</td>
+      <td>3.1</td>
+      <td>5.1</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>5.8</td>
+      <td>2.7</td>
+      <td>5.0</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>6.8</td>
+      <td>3.2</td>
+      <td>5.9</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>6.7</td>
+      <td>3.3</td>
+      <td>5.7</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>6.1</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>6.2</td>
+      <td>3.4</td>
+      <td>5.4</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>5.9</td>
+      <td>3.0</td>
+      <td>5.1</td>
+      <td>1.8</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tarefa:</p>
+<ul>
+<li>Verifique se o modelo construído com regressão linear é melhor do que usar imputação de valores ausentes usando a média. Implemente esse modelo e justificar a sua resposta comparando o coeficiente de correlação e o erro médio quadrático.</li>
 </ul>
 
 </div>
