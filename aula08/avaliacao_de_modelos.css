@@ -1,0 +1,7 @@
+.rise-enabled .rendered_html table.dataframe {
+    font-size: 80%;
+}
+
+.rendered_html * + table {
+    font-size: 80%;
+}
