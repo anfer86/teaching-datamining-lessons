@@ -15382,7 +15382,7 @@ Name: 11, dtype: object</pre>
 </div>
 </div>
 
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -17377,23 +17377,44 @@ $$ \cos ({\bf P},{\bf Q})= {{\bf P} . {\bf Q} \over \|{\bf P}\| \|{\bf Q}\|} = \
 <h3 id="Fun&#231;&#245;es-de-Predi&#231;&#227;o">Fun&#231;&#245;es de Predi&#231;&#227;o<a class="anchor-link" href="#Fun&#231;&#245;es-de-Predi&#231;&#227;o">&#182;</a></h3><ul>
 <li><p>A função de predição mais comum é a classe majoritária dentre os $k$ vizinhos mais próximos.</p>
 </li>
-<li><p>Mas outras funções são possíveis e podem ser experimentadas para obter melhores resultados de classificação, por exemplo, ponderar os valores das classes dos vizinhos mais próximos pela seu valor de distância, para valorizar mais aqueles que estão mais perto e menos aqueles que estão mais longe. Sempre falando apenas dos vizinhos mais próximos.</p>
+<li><p>Mas outras funções são possíveis e podem ser experimentadas para obter melhores resultados de classificação, por exemplo, ponderar os valores das classes dos vizinhos mais próximos pela seu valor de distância, para valorizar mais aqueles que estão mais perto e menos aqueles que estão mais longe. Isso vale apenas para tomar a decisão da classe em relação aos vizinhos mais próximos.</p>
 </li>
-<li><p>Ainda essa ponderação pode ser linear ou de decaimento exponencial.</p>
+<li><p>Uma exemplo de ponderação é usar o inverso da distância. Suponha os $k$ vizinhos mais próximos $E = e_1, e_2, ..., e_k$ de uma instância $x$ com distâncias $D = d_1, d_2, ..., d_k$ e classes $C = c_1, c_2, ..., c_q$. Considere $class(e_i)$ a classe do exemplo $c_i$.</p>
 </li>
 </ul>
-
+$$
+score(c_i, E, D) = \sum_{class(e_i)~=~c_i} {d_i^{-1}}
+$$$$
+f(E,D) = \underset{c_i~\in~C}{\operatorname{argmax}} score(c_i, E, D)
+$$
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Exemplo com três classes $C = c_1, c_2, c_3$, cinco vizinhos mais próximos de uma instância $E = e_1, e_2, e_3, e_4, e_5$ com classes $c_1, c_2, c_3, c_2, c_1$ e distâncias $d_1=2.0$, $d_2=2.5$, $d_3=3.0$, $d_4=4.0$, $d_5=9.0$.</li>
+</ul>
+$$
+score(c_1, E, D) = \sum_{class(e_i)~=~c_1} {d_i^{-1}} = 2.0^{-1} + 9.0^{-1} = 0.61\\
+score(c_2, E, D) = \sum_{class(e_i)~=~c_2} {d_i^{-1}} = 2.5^{-1} + 4.0^{-1} = 0.65\\
+score(c_3, E, D) = \sum_{class(e_i)~=~c_3} {d_i^{-1}} = 3.0^{-1} = 0.33\\
+$$$$
+f(E,D) = \underset{c_i~\in~C}{\operatorname{argmax}} score(c_i, E, D) = 
+\underset{c_i~\in~C}{\operatorname{argmax}}~(0.61,0.65,0.33) = c_2
+$$
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Exerc&#237;cios">Exerc&#237;cios<a class="anchor-link" href="#Exerc&#237;cios">&#182;</a></h2><p>Explore a documentação do <code>KNeighborsClassifier</code>. Os parâmetros <code>n_neighbors</code>, <code>weights</code> e <code>p</code> tem relação com os parâmetros <code>k</code>, <code>função de predição</code> e <code>função de distância</code>, comentados nesta aula.</p>
 <ol>
-<li><p>Com conjunto de dados iris com 150 instâncias e os atributos <code>sepal_legth</code> e <code>sepal_width</code>, visualize os espaços de decisão de modelos preditivos usando $n_neighbors=3$ variando as estratégias <code>weights</code> e <code>p</code>.</p>
+<li><p>Com conjunto de dados iris com 150 instâncias e os atributos <code>sepal_length</code> e <code>sepal_width</code>, visualize os espaços de decisão de modelos preditivos usando <code>n_neighbors=3</code> variando as estratégias <code>weights</code> e <code>p</code>.</p>
 </li>
-<li><p>Com conjunto de dados iris com 150 instâncias e os atributos <code>petal_legth</code> e <code>petal_width</code>, explore 10 combinações de parâmetros do classificador <code>KNeighborsClassifier</code> e visualize os espaços de decisão.</p>
+<li><p>Com conjunto de dados iris com 150 instâncias e os atributos <code>petal_length</code> e <code>petal_width</code>, explore 10 combinações de parâmetros do classificador <code>KNeighborsClassifier</code> e visualize os espaços de decisão.</p>
 </li>
 <li><p>Com o conjunto de dados iris com 150 instâncias e todos os atributos, faça a separação de 70% para treino e 30% para teste, de forma estratificada. Usando uma estratégia holdout de avaliação, construa um modelo com o conjunto de treino e calcule os valores de accuracy, precision, recall e Fscore sobre o conjunto de teste. Compare os resultados com os obtidos ao utilizar árvores de decisão (tarefa de avaliação de modelos).</p>
 </li>
@@ -17401,6 +17422,19 @@ $$ \cos ({\bf P},{\bf Q})= {{\bf P} . {\bf Q} \over \|{\bf P}\| \|{\bf Q}\|} = \
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
