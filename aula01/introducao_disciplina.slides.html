@@ -13113,7 +13113,7 @@ ul.typeahead-list  > li > a.pull-right {
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
-  font-size: 160%;
+  font-size: 160%;  
 }
 .reveal pre {
   width: inherit;
@@ -13136,7 +13136,8 @@ ul.typeahead-list  > li > a.pull-right {
   font-size: 2em;
 }
 .reveal .slides {
-  text-align: left;
+  text-align: left;  
+  width : 20px;
 }
 .reveal.fade {
   opacity: 1;
@@ -13309,13 +13310,9 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Aprendizado-Supervisionado">2. Aprendizado Supervisionado<a class="anchor-link" href="#2.-Aprendizado-Supervisionado">&#182;</a></h2><ul>
 <li>Classificação e Regressão</li>
-<li>Paradigma Simbólico: algoritmos de árvores de decisão e regras de classificação</li>
+<li>Paradigma Simbólico: algoritmos de árvores de decisão</li>
 <li>Paradigma Probabilístico</li>
-<li>Paradigma Baseado em Exemplos:<ul>
-<li>Algoritmo dos vizinhos mais próximos</li>
-<li>Funções de predição e de similaridade/distância</li>
-</ul>
-</li>
+<li>Paradigma Baseado em Exemplos</li>
 <li>Máquinas Vetores de Suporte</li>
 </ul>
 
@@ -13339,13 +13336,12 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Avalia&#231;&#227;o">Avalia&#231;&#227;o<a class="anchor-link" href="#Avalia&#231;&#227;o">&#182;</a></h1><p>Serão realizadas as seguintes avaliações:</p>
 <ul>
-<li>$P1$ - Prova prática abordando Unidade 1</li>
-<li>$P2$ - Prova prática abordando Unidade 2</li>
-<li>$P3$ - Prova prática abordando Unidade 3</li>
+<li>$P1$ - Prova abordando Unidade 1</li>
+<li>$P2$ - Prova abordando Unidade 2</li>
 <li>$T1$ - Trabalho prático abordando as Unidades 1, 2 e 3</li>
 </ul>
 <p>A nota final do aluno será atribuída, em números inteiros, no intervalo de 0 a 10. A média final (MF) do aluno será dada pela fórmula abaixo:</p>
-$$ MF = (0.2 * P1 + 0.3 * P2 + 0.3 * P3 + 0.2 * T1) $$<p>O aluno será considerado apto na disciplina se obtiver uma Média Final (MF) maior ou igual a 6.</p>
+$$ MF = (0.3 * P1 + 0.4 * P2 + 0.3 * T1) $$<p>O aluno será considerado apto na disciplina se obtiver uma Média Final (MF) maior ou igual a 6.</p>
 
 </div>
 </div>
@@ -13372,7 +13368,7 @@ $$ MF = (0.2 * P1 + 0.3 * P2 + 0.3 * P3 + 0.2 * T1) $$<p>O aluno será considera
 <h2 id="Recupera&#231;&#227;o">Recupera&#231;&#227;o<a class="anchor-link" href="#Recupera&#231;&#227;o">&#182;</a></h2><p>São previstas as recuperações:</p>
 <ul>
 <li>$RP1$ - Recuperação da P1</li>
-<li>$RP2$ - Recuperação da P2 e P3</li>
+<li>$RP2$ - Recuperação da P2</li>
 <li>$RT1$ - Recuperação do T1</li>
 </ul>
 <p>Estas recuperações serão feitas dentro da carga horária da disciplina.</p>
@@ -13409,9 +13405,10 @@ $$ MF = (0.2 * P1 + 0.3 * P2 + 0.3 * P3 + 0.2 * T1) $$<p>O aluno será considera
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sugest&#245;es">Sugest&#245;es<a class="anchor-link" href="#Sugest&#245;es">&#182;</a></h2><ul>
+<h2 id="Outros">Outros<a class="anchor-link" href="#Outros">&#182;</a></h2><ul>
 <li>LIMA, I.; PINHEIRO, C. A. M.; SANTOS, F. A. O. <strong>Inteligência artificial</strong>. Rio de Janeiro: Elsevier, 2014. 173 p.</li>
 <li>RUSSELL, S.; NORVIG, P. <strong>Inteligência artificial: referência completa para cursos de computação</strong>. 3 ed. São Paulo: Elsevier, 2013. 988 p.</li>
+<li>MCKINNEY, Wes. <strong>Python para Análise de Dados</strong>. São Paulo: Novatec, 2018. 615 p.</li>
 </ul>
 
 </div>
@@ -13462,7 +13459,7 @@ require(
         Reveal.addEventListener('slidechanged', update);
 
         function setScrollingSlide() {
-            var scroll = false
+            var scroll = true
             if (scroll === true) {
               var h = $('.reveal').height() * 0.95;
               $('section.present').find('section')

@@ -13113,7 +13113,7 @@ ul.typeahead-list  > li > a.pull-right {
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
-  font-size: 160%;
+  font-size: 160%;  
 }
 .reveal pre {
   width: inherit;
@@ -13136,7 +13136,8 @@ ul.typeahead-list  > li > a.pull-right {
   font-size: 2em;
 }
 .reveal .slides {
-  text-align: left;
+  text-align: left;  
+  width : 20px;
 }
 .reveal.fade {
   opacity: 1;
@@ -13244,9 +13245,9 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <link rel="stylesheet" href="ipython.min.css">
 
-<p><img src="img/logoifsc.png"></p>
-<hr>
-<p>Prof. Carlos Andrés Ferrero</p>
+<p><div class="text-center">
+<img src="img/logoifsc.png"></p>
+<h2 id="&lt;/div&gt;">&lt;/div&gt;<a class="anchor-link" href="#&lt;/div&gt;">&#182;</a></h2><p>Prof. Carlos Andrés Ferrero</p>
 <h1 id="Introdu&#231;&#227;o-a-Aprendizado-de-M&#225;quina-e-Ci&#234;ncia-de-Dados">Introdu&#231;&#227;o a Aprendizado de M&#225;quina e Ci&#234;ncia de Dados<a class="anchor-link" href="#Introdu&#231;&#227;o-a-Aprendizado-de-M&#225;quina-e-Ci&#234;ncia-de-Dados">&#182;</a></h1><hr>
 
 </div>
@@ -13588,7 +13589,7 @@ a.anchor-link {
 </ul>
 <div align="center">
     <img src="img/semisupervised.png" width="60%">
-    <div style="font-size:0.7em; text-align:left">Fonte: Wang, F., & Zhang, C. (2007). <b>Robust self-tuning semi-supervised learning</b>. Neurocomputing, 70(16-18), 2931-2939.</div>
+    <div style="font-size:0.7em">Fonte: Wang, F., & Zhang, C. (2007). <b>Robust self-tuning semi-supervised learning</b>. Neurocomputing, 70(16-18), 2931-2939.</div>
 </div>
 </div>
 </div>
@@ -13658,7 +13659,7 @@ require(
         Reveal.addEventListener('slidechanged', update);
 
         function setScrollingSlide() {
-            var scroll = false
+            var scroll = true
             if (scroll === true) {
               var h = $('.reveal').height() * 0.95;
               $('section.present').find('section')
