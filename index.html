@@ -32,8 +32,8 @@
             </div>
             <ul class="list-unstyled components m-0 p-0">
                 <li>                    
-                    <a href="aula02/introducao_aprendizado.slides.html" class='frame_link row m-0' data-toggle="collapse" aria-expanded="false">                        
-                            <div class='d-inline-block'>1</div>
+                    <a href="aula02/introducao_aprendizado.slides.html" class='frame_link row m-0 no-gutters' data-toggle="collapse" aria-expanded="false">                        
+                            <div class='d-inline-block col-1'>1.</div>
                             <div class='d-inline-block col-9'>Introdução</div>
                             <div class='d-inline-block col-1 btn-link frame_link_html' link='aula02/introducao_aprendizado.html'><i class='fas fa-print'></i></div>                        
                     </a>             
@@ -41,12 +41,17 @@
                 </li>
 
                 <li>
-                    <a href="#preparacaoDadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                        
-                        2. Preparação de Dados
+                    <a href="#preparacaoDadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle row m-0 no-gutters"> 
+                        <div class='d-inline-block col-1'>2.</div>
+                        <div class='d-inline-block col-10'>Preparação de Dados</div>                                               
                     </a>
                     <ul class="collapse list-unstyled" id="preparacaoDadosSubmenu">
                         <li>
-                            <a href="aula03/preprocessamento.slides.html" class='frame_link'>Pré-processamento</a>
+                            <a href="aula03/preprocessamento.slides.html" class='frame_link row m-0 no-gutters'>
+                                <div class='d-inline-block'>2.1.</div>
+                                <div class='d-inline-block col-9'>Pré-processamento</div>
+                                <div class='d-inline-block col-1 btn-link frame_link_html' link='aula03/preprocessamento.html'><i class='fas fa-print'></i></div>                                
+                            </a>
                         </li>
                         <li>
                             <a href="aula04/fundamentos_visualizacao.slides.html" class='frame_link'>Fundamentos Estatísticos</a>
@@ -58,8 +63,9 @@
                 </li>
 
                 <li>
-                    <a href="#aprendizadoSupervisionadoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                        
-                        3. Aprendizado<br>Supervisionado
+                    <a href="#aprendizadoSupervisionadoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle row m-0 no-gutters">           
+                        <div class='d-inline-block col-1 align-top'>3.</div>
+                        <div class='d-inline-block col-9'>Aprendizado<br>Supervisionado</div>                                            
                     </a>
                     <ul class="collapse list-unstyled" id="aprendizadoSupervisionadoSubmenu">
                         <li>
@@ -78,8 +84,9 @@
                 </li>
 
                 <li>
-                    <a href="#aprendizadoNaoSupervisionadoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                        
-                        4. Aprendizado<br> não Supervisionado
+                    <a href="#aprendizadoNaoSupervisionadoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle row m-0 no-gutters">           
+                        <div class='d-inline-block col-1 align-top'>4.</div>
+                        <div class='d-inline-block col-9'>Aprendizado<br>não Supervisionado</div>                                                     
                     </a>
                     <ul class="collapse list-unstyled" id="aprendizadoNaoSupervisionadoSubmenu">
                         <li>
@@ -143,8 +150,8 @@
         });
 
         $(".frame_link_html").click(function(e) {        
-            e.preventDefault();                 
-            window.open('aula02/introducao_aprendizado.html', '_blank');
+            e.preventDefault();                             
+            window.open($(this).attr("link"), '_blank');
         });
 
     });
