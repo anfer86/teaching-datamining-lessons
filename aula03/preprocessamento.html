@@ -13183,7 +13183,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[128]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13197,7 +13197,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">desconhecido</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span>
@@ -13211,7 +13211,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">idades</span>
@@ -13227,7 +13227,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[130]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13246,7 +13246,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Um atributo de data deve conter valores de data maiores do que 01/01/2010. Se algum valor desse atributo for menor do que essa data também tamos que tomar uma decisão.</li>
+<li>Em outro exemplo, um atributo de data deve conter valores de data maiores do que 01/01/2010. Se algum valor desse atributo for menor do que essa data também temos que tomar uma decisão.</li>
 </ul>
 
 </div>
@@ -13277,7 +13277,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">26.6</span><span class="p">,</span> <span class="mf">27.8</span><span class="p">,</span> <span class="mf">25.6</span><span class="p">,</span> <span class="mf">26.2</span><span class="p">,</span> <span class="mf">120.0</span><span class="p">,</span> <span class="mf">20.4</span><span class="p">,</span> <span class="mf">29.4</span><span class="p">,</span> <span class="mf">24.4</span><span class="p">,</span> <span class="mf">26.9</span><span class="p">,</span> <span class="mf">26.7</span><span class="p">])</span>
@@ -13292,7 +13292,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">temperatura</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span><span class="o">/</span><span class="n">desvio</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">media</span><span class="p">,</span> <span class="n">temperatura</span> <span class="p">)</span>
@@ -13305,7 +13305,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatura</span>
@@ -13321,7 +13321,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[133]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13367,10 +13367,10 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Por exemplo, se medimos a distância entre dois usários pela diferença entre seus valores temos:<ul>
-<li>Usuário 1 (salario = 1000, poupança = 20000)</li>
-<li>Usuário 2 (salario = 1500, poupança = 50000)</li>
-<li>Diferença  (salario = 500, poupança = 30000), Total (30500)</li>
+<li>Por exemplo, ao medir a distância entre dois usários pela diferença entre seus valores tem-se:<ul>
+<li>Usuário 1 (salário = 1000, poupança = 20000)</li>
+<li>Usuário 2 (salário = 1500, poupança = 50000)</li>
+<li>Diferença  (salário = 500, poupança = 30000), Total (30500)</li>
 <li>O problema que observamos é que a variável salário contribui muito menos para a soma das distâncias do que a variável poupança. </li>
 </ul>
 </li>
@@ -13383,7 +13383,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>O objetivo da normalização é ajustar a escala dos valores dos atributos para que tenha dispersões ou intervalos mais similares.</li>
+<li>O objetivo da normalização é ajustar a escala dos valores dos atributos para que tenham dispersões ou intervalos mais similares.</li>
 <li>Métodos para normalização de dados numéricos:<ul>
 <li>Linear</li>
 <li>Desvio-padrão</li>
@@ -13400,7 +13400,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Normaliza&#231;&#227;o-Linear">Normaliza&#231;&#227;o Linear<a class="anchor-link" href="#Normaliza&#231;&#227;o-Linear">&#182;</a></h3><ul>
-<li>A normalização linear consiste em manter os dados no intervalo $[0,1]$. Para isso, uma função de transformação linear.</li>
+<li>A normalização linear consiste em manter os dados no intervalo $[0,1]$. Para isso, usa-se uma função de transformação linear.</li>
 </ul>
 $$ f(x) = \frac{x - min(\mathbf{x})}{max(\mathbf{x}) - min(\mathbf{x})} = x'$$<ul>
 <li>onde,<ul>
@@ -13479,7 +13479,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13499,7 +13499,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[134]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13980,7 +13980,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -13996,7 +13996,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[135]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14105,7 +14105,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">normalizacao_linear</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
@@ -14129,7 +14129,7 @@ $$ f(x) = \frac{x}{10^j} = x'$$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">normalizacao_linear</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sepal length (cm)&#39;</span><span class="p">]</span> <span class="p">)</span>
@@ -14160,7 +14160,7 @@ max:  1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[137]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -14198,7 +14198,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_linear</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
@@ -14215,7 +14215,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[138]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -14293,7 +14293,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[139]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14309,7 +14309,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[139]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -14422,374 +14422,6 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">TODO</span>
-<span class="sd">Normalização por Desvio-padrão</span>
-<span class="sd">Normalização por Valor Máximo</span>
-<span class="sd">Normalização por Escala Decimal</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="k">def</span> <span class="nf">normalizacao_desvio_padrao</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-
-<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_desvio_padrao</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">new_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[140]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepal length (cm)</th>
-      <th>sepal width (cm)</th>
-      <th>petal length (cm)</th>
-      <th>petal width (cm)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>150.00000</td>
-      <td>150.00000</td>
-      <td>150.00000</td>
-      <td>150.00000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>-0.00000</td>
-      <td>-0.00000</td>
-      <td>-0.00000</td>
-      <td>-0.00000</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>1.00335</td>
-      <td>1.00335</td>
-      <td>1.00335</td>
-      <td>1.00335</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>-1.87002</td>
-      <td>-2.43395</td>
-      <td>-1.56758</td>
-      <td>-1.44708</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>-0.90068</td>
-      <td>-0.59237</td>
-      <td>-1.22655</td>
-      <td>-1.18381</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>-0.05251</td>
-      <td>-0.13198</td>
-      <td>0.33648</td>
-      <td>0.13251</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>0.67450</td>
-      <td>0.55861</td>
-      <td>0.76276</td>
-      <td>0.79067</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>2.49202</td>
-      <td>3.09078</td>
-      <td>1.78583</td>
-      <td>1.71210</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[141]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">normalizacao_maximo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-
-<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_maximo</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">new_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[141]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepal length (cm)</th>
-      <th>sepal width (cm)</th>
-      <th>petal length (cm)</th>
-      <th>petal width (cm)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>150.000000</td>
-      <td>150.000000</td>
-      <td>150.000000</td>
-      <td>150.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>0.739662</td>
-      <td>0.694848</td>
-      <td>0.544638</td>
-      <td>0.479733</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.104818</td>
-      <td>0.099061</td>
-      <td>0.255840</td>
-      <td>0.304895</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.544304</td>
-      <td>0.454545</td>
-      <td>0.144928</td>
-      <td>0.040000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>0.645570</td>
-      <td>0.636364</td>
-      <td>0.231884</td>
-      <td>0.120000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>0.734177</td>
-      <td>0.681818</td>
-      <td>0.630435</td>
-      <td>0.520000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>0.810127</td>
-      <td>0.750000</td>
-      <td>0.739130</td>
-      <td>0.720000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[142]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="k">def</span> <span class="nf">normalizacao_escala_decimal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>    
-    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="n">j</span>
-    
-<span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalizacao_escala_decimal</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[142]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepal length (cm)</th>
-      <th>sepal width (cm)</th>
-      <th>petal length (cm)</th>
-      <th>petal width (cm)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>150.000000</td>
-      <td>150.000000</td>
-      <td>150.00000</td>
-      <td>150.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>0.584333</td>
-      <td>0.305733</td>
-      <td>0.37580</td>
-      <td>0.119933</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.082807</td>
-      <td>0.043587</td>
-      <td>0.17653</td>
-      <td>0.076224</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.430000</td>
-      <td>0.200000</td>
-      <td>0.10000</td>
-      <td>0.010000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>0.510000</td>
-      <td>0.280000</td>
-      <td>0.16000</td>
-      <td>0.030000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>0.580000</td>
-      <td>0.300000</td>
-      <td>0.43500</td>
-      <td>0.130000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>0.640000</td>
-      <td>0.330000</td>
-      <td>0.51000</td>
-      <td>0.180000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>0.790000</td>
-      <td>0.440000</td>
-      <td>0.69000</td>
-      <td>0.250000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14849,7 +14481,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[143]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -14867,7 +14499,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[143]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14894,7 +14526,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="p">{</span><span class="s1">&#39;genero&#39;</span> <span class="p">:</span> <span class="n">genero</span><span class="p">}</span> <span class="p">)</span>
@@ -14911,7 +14543,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[144]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -15041,7 +14673,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
@@ -15059,7 +14691,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[145]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -15210,7 +14842,7 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[146]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">to_replace</span> <span class="o">=</span> <span class="p">{</span>
@@ -15258,7 +14890,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span> <span class="o">=</span> <span class="n">to_replace</span><span class="p">)</span>
@@ -15275,7 +14907,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[147]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -15426,7 +15058,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_categoria_genero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -15450,7 +15082,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[148]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -15467,7 +15099,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_categoria_genero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -15487,7 +15119,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[149]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -15514,7 +15146,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genero_categoria_2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">genero</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_categoria_genero</span><span class="p">)</span>
@@ -15531,7 +15163,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[150]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -15725,7 +15357,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -15744,7 +15376,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[151]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -15864,7 +15496,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_discretized_idade</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -15887,7 +15519,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[153]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;idade_discretizado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">idade</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_discretized_idade</span><span class="p">)</span>
@@ -15904,7 +15536,7 @@ type:  &lt;class &#39;dict&#39;&gt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[153]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -16096,7 +15728,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[154]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -16166,7 +15798,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[155]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
@@ -16199,7 +15831,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[156]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">intervalos</span> <span class="o">=</span> <span class="p">(</span><span class="n">idade</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">idade</span><span class="p">))</span> <span class="o">//</span> <span class="n">L</span>
@@ -16217,7 +15849,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[156]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -16256,7 +15888,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[157]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
@@ -16273,7 +15905,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[157]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -16310,7 +15942,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[158]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
@@ -16364,7 +15996,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
@@ -16381,7 +16013,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[159]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -16398,7 +16030,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s2">&quot;idade&quot;</span> <span class="p">:</span> <span class="n">idade</span><span class="p">,</span> <span class="s2">&quot;rank&quot;</span> <span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;intervalo&quot;</span> <span class="p">:</span> <span class="n">intervalos_igual_frequencia</span><span class="p">}</span> <span class="p">)</span>
@@ -16415,7 +16047,7 @@ $$L = \frac{max(\mathbf{x}) - min(\mathbf{x}) + 1}{k}$$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[160]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -17058,7 +16690,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">],</span> <span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -17075,7 +16707,7 @@ Imputar de acordo com modelos preditivos</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[161]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -17556,7 +17188,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -17600,7 +17232,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing_true</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">to_remove</span><span class="p">,</span><span class="s1">&#39;petal length (cm)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -17645,7 +17277,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[164]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
@@ -17661,7 +17293,7 @@ Imputar de acordo com modelos preditivos</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[164]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -18142,7 +17774,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[165]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">to_remove</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -18159,7 +17791,7 @@ Imputar de acordo com modelos preditivos</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[165]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -18237,7 +17869,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[166]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">to_remove</span><span class="p">,:]</span>
@@ -18254,7 +17886,7 @@ Imputar de acordo com modelos preditivos</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[166]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -18349,7 +17981,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;petal length (cm)&#39;</span>
@@ -18374,7 +18006,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[168]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
@@ -18392,13 +18024,13 @@ Imputar de acordo com modelos preditivos</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[168]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)</pre>
+<pre>LinearRegression()</pre>
 </div>
 
 </div>
@@ -18409,7 +18041,7 @@ Imputar de acordo com modelos preditivos</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[169]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Coeficientes: &#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
@@ -18442,7 +18074,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[170]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">regression_to_equation</span> <span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">coefs</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">nround</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
@@ -18459,7 +18091,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">regression_to_equation</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
@@ -18475,7 +18107,7 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[171]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -18502,7 +18134,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_missing</span> <span class="o">=</span> <span class="n">missing</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -18521,7 +18153,7 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[172]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -18543,7 +18175,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[173]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing_true</span>
@@ -18559,7 +18191,7 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[173]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -18588,7 +18220,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[174]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s1">&#39;missing_true&#39;</span><span class="p">:</span> <span class="n">missing_true</span><span class="p">,</span> <span class="s1">&#39;y_missing_pred&#39;</span> <span class="p">:</span> <span class="n">y_missing_pred</span> <span class="p">})</span>
@@ -18605,7 +18237,7 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[174]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -18806,7 +18438,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[175]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;missing_true&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;y_missing_pred&#39;</span><span class="p">)</span>
@@ -18822,28 +18454,13 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[175]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1e99f52b6a0&gt;</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x174024534a8&gt;</pre>
 </div>
 
 </div>
@@ -18864,7 +18481,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;missing_true&#39;</span><span class="p">],</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;y_missing_pred&#39;</span><span class="p">])</span> 
@@ -18881,7 +18498,7 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[176]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -18908,7 +18525,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
@@ -18924,7 +18541,7 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[177]:</div>
+    <div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -18951,7 +18568,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;missing_true&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;y_missing_pred&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
@@ -18967,7 +18584,7 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[178]:</div>
+    <div class="prompt output_prompt">Out[52]:</div>
 
 
 
@@ -18994,7 +18611,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
@@ -19009,7 +18626,7 @@ Intercepto:  -0.27128316566803523
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
@@ -19025,7 +18642,7 @@ Intercepto:  -0.27128316566803523
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[180]:</div>
+    <div class="prompt output_prompt">Out[54]:</div>
 
 
 
