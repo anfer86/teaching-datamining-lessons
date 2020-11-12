@@ -13134,7 +13134,7 @@ div#notebook {
 <li>Limpeza de dados</li>
 <li>Transformação de dados<ul>
 <li>Normalização de dados numéricos</li>
-<li>Discretização de dados numéricos</li>
+<li>Discretização/Categorização de dados numéricos</li>
 <li>Transformação de dados qualitativos em quantiativos</li>
 <li>Outras transformações de dados</li>
 </ul>
@@ -14425,10 +14425,10 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Discretiza&#231;&#227;o-de-Dados-Num&#233;ricos">Discretiza&#231;&#227;o de Dados Num&#233;ricos<a class="anchor-link" href="#Discretiza&#231;&#227;o-de-Dados-Num&#233;ricos">&#182;</a></h2><ul>
-<li><p>Alguns algoritmos de aprendizado trabalham apenas com dados discretos (ou categóricos), como o ID3 (Iterative Dichotomiser 3) desenvolvido por Ross Quinlan em 1986. Isto é, ao invés de utilizar o valor de, por exemplo, altura em metros ou centímetros, utilizam os valores baixo, médio, alto.</p>
+<h2 id="Discretiza&#231;ao/Categoriza&#231;&#227;o-de-Dados-Num&#233;ricos">Discretiza&#231;ao/Categoriza&#231;&#227;o de Dados Num&#233;ricos<a class="anchor-link" href="#Discretiza&#231;ao/Categoriza&#231;&#227;o-de-Dados-Num&#233;ricos">&#182;</a></h2><ul>
+<li><p>Alguns algoritmos de aprendizado trabalham apenas com dados categóricos, como o ID3 (Iterative Dichotomiser 3) desenvolvido por Ross Quinlan em 1986. Isto é, ao invés de utilizar o valor de, por exemplo, altura em metros ou centímetros, utilizam os valores baixo, médio, alto.</p>
 </li>
-<li><p>Outros algoritmos podem ter desempenho melhor em alguns problemas se usada a representação discretazada de uma variável contínua, como no caso do algoritmo Naïve Bayes.</p>
+<li><p>Outros algoritmos podem ter desempenho melhor em alguns problemas se usada a representação categórica de uma variável contínua, como no caso do algoritmo Naïve Bayes.</p>
 </li>
 <li><p>Em algumas ocasiões o armazenamento de dados é feito com valores numéricos, embora indiquem informações categóricas, por exemplo um atributo gênero, onde o valor 0 indica masculino, 1 feminino e 2 outro.</p>
 </li>
@@ -14460,9 +14460,9 @@ Name: sepal length (cm), Length: 150, dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Mapeamento-Direto">Mapeamento Direto<a class="anchor-link" href="#Mapeamento-Direto">&#182;</a></h3><ul>
-<li><p>Neste tipo de discretização ocorre a substituição de valores numéricos por valores categóricos conhecidos no domínio do problema.</p>
+<li><p>Neste tipo de categorização ocorre a substituição de valores numéricos por valores categóricos conhecidos no domínio do problema.</p>
 </li>
-<li><p>Como o exemplo citado anteriormente, o atributo gênero pode ser armazenado como um valor numérico e o mesmo deve ser transformado, com o objetivo que, tanto as técnicas visualização, quanto os algoritmos de aprendizado não entendam esse atributo como numérico e sim como discreto.</p>
+<li><p>Como o exemplo citado anteriormente, o atributo gênero pode ser armazenado como um valor numérico e o mesmo deve ser transformado, com o objetivo que, tanto as técnicas visualização, quanto os algoritmos de aprendizado não entendam esse atributo como numérico e sim como categórico.</p>
 </li>
 </ul>
 
