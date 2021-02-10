@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>medindo_qualidade_atributos slides</title>
+<title>analise_entropia slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13240,65 +13240,101 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="img/logoifsc.png"></p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
 
+    </div>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p>Prof. Carlos Andrés Ferrero</p>
-<h1 id="Minera&#231;&#227;o-de-Dados">Minera&#231;&#227;o de Dados<a class="anchor-link" href="#Minera&#231;&#227;o-de-Dados">&#182;</a></h1><h2 id="Medindo-a-Qualidade-de-Atributos">Medindo a Qualidade de Atributos<a class="anchor-link" href="#Medindo-a-Qualidade-de-Atributos">&#182;</a></h2><hr>
 
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conte&#250;do">Conte&#250;do<a class="anchor-link" href="#Conte&#250;do">&#182;</a></h2><ul>
-<li>Entropia<ul>
-<li>Entropia para problemas de duas classes</li>
-<li>Entropia para problemas múltiplas classes</li>
-</ul>
-</li>
-<li>Entropia de Atributos</li>
-<li>Medidas de Importância<ul>
-<li>Ganho de Informação (<em>Information Gain</em>)</li>
-<li>Taxa de Ganho (<em>Gain Ratio</em>)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introdu&#231;ao">Introdu&#231;ao<a class="anchor-link" href="#Introdu&#231;ao">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Conjunto de Dados do Titanic</strong></p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[228]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;titanic&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">positive</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">positive</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([2.71388797, 2.0179332 , 1.51922236, 2.53642508, 1.42780757,
+       1.74567864, 2.21633225, 2.49040185, 1.20598208, 1.83790923])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">negative</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">negative</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([3.98168592, 3.20377401, 3.79756789, 2.50011419, 4.07874694,
+       4.6858586 , 4.97676541, 4.4194373 , 4.60530476, 3.57903668,
+       3.54971746, 2.01245631, 3.28301803, 2.24417387, 2.32770696,
+       3.27642386, 4.88680975, 2.05662282, 4.36843775, 3.74523657,
+       4.86561875, 4.76075773, 2.66335044, 2.80157699, 3.72607737,
+       3.19033977, 4.8091838 , 3.79469235, 4.65432434, 2.40415605])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;class&#39;</span> <span class="p">:</span> <span class="s1">&#39;positive&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span> <span class="p">:</span> <span class="n">positive</span><span class="p">})</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;class&#39;</span> <span class="p">:</span> <span class="s1">&#39;negative&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span> <span class="p">:</span><span class="n">negative</span><span class="p">}))</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13312,7 +13348,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[228]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13335,113 +13371,35 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>survived</th>
-      <th>pclass</th>
-      <th>sex</th>
-      <th>age</th>
-      <th>sibsp</th>
-      <th>parch</th>
-      <th>fare</th>
-      <th>embarked</th>
       <th>class</th>
-      <th>who</th>
-      <th>adult_male</th>
-      <th>deck</th>
-      <th>embark_town</th>
-      <th>alive</th>
-      <th>alone</th>
+      <th>x</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
-      <td>3</td>
-      <td>male</td>
-      <td>22.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>7.2500</td>
-      <td>S</td>
-      <td>Third</td>
-      <td>man</td>
-      <td>True</td>
-      <td>NaN</td>
-      <td>Southampton</td>
-      <td>no</td>
-      <td>False</td>
+      <td>positive</td>
+      <td>2.713888</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>female</td>
-      <td>38.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>71.2833</td>
-      <td>C</td>
-      <td>First</td>
-      <td>woman</td>
-      <td>False</td>
-      <td>C</td>
-      <td>Cherbourg</td>
-      <td>yes</td>
-      <td>False</td>
+      <td>positive</td>
+      <td>2.017933</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1</td>
-      <td>3</td>
-      <td>female</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.9250</td>
-      <td>S</td>
-      <td>Third</td>
-      <td>woman</td>
-      <td>False</td>
-      <td>NaN</td>
-      <td>Southampton</td>
-      <td>yes</td>
-      <td>True</td>
+      <td>positive</td>
+      <td>1.519222</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1</td>
-      <td>1</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>53.1000</td>
-      <td>S</td>
-      <td>First</td>
-      <td>woman</td>
-      <td>False</td>
-      <td>C</td>
-      <td>Southampton</td>
-      <td>yes</td>
-      <td>False</td>
+      <td>positive</td>
+      <td>2.536425</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0</td>
-      <td>3</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8.0500</td>
-      <td>S</td>
-      <td>Third</td>
-      <td>man</td>
-      <td>True</td>
-      <td>NaN</td>
-      <td>Southampton</td>
-      <td>no</td>
-      <td>True</td>
+      <td>positive</td>
+      <td>1.427808</td>
     </tr>
   </tbody>
 </table>
@@ -13453,25 +13411,13 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Conjunto de Dados do Titanic</strong></p>
-<p>Qual das variábeis Sex ou Random_Variable dão mais informação sobre o destino do Passageiros (sobrevivente ou não)?</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[229]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">helper</span> <span class="k">import</span> <span class="n">countplot_sex_random_variable_survived_titanic</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">countplot_sex_random_variable_survived_titanic</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13484,13 +13430,26 @@ a.anchor-link {
 
 <div class="output_area">
 
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;seaborn.axisgrid.FacetGrid at 0x243822a0f28&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
     <div class="prompt"></div>
 
 
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -13500,176 +13459,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Entropia">Entropia<a class="anchor-link" href="#Entropia">&#182;</a></h2><ul>
-<li><p>A <em>entropia</em> em Mineração de Dados mede a <em>desordem</em> de um conjunto de dados baseado na distribuição do atributo classe.</p>
-</li>
-<li><p>Essa <em>desordem</em> diz respeito a quão bem organizados estão os dados em relação à classe.</p>
-</li>
-<li><p>A medida é supervisionada, portanto para medir a <em>entropia</em> de um atributo precisamos ter um atributo classe.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="C&#225;lculo-de-Entropia-em-um-Problema-de-Duas-Clases">C&#225;lculo de Entropia em um Problema de Duas Clases<a class="anchor-link" href="#C&#225;lculo-de-Entropia-em-um-Problema-de-Duas-Clases">&#182;</a></h3><ul>
-<li><p>Considere um problema de duas clases em que uma delas é positiva (+) e a outra negativa (-). E um conjunto de dados $X$ que possui dados sobre esse problema.</p>
-</li>
-<li><p>A função para medir a entropia é dada por:</p>
-</li>
-</ul>
-$$ E(X) = -\;(\;\;p_+  \log_2{p_+}\;\;+\;\;p_- \times \log_2{p_-}\;\;) $$<ul>
-<li>onde, <ul>
-<li>$p_+$ é a probabilidade de um exemplo ser da classe positiva</li>
-<li>$p_-$ é a probabilidade de um exemplo ser da classe negativa</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exemplos">Exemplos<a class="anchor-link" href="#Exemplos">&#182;</a></h3><ul>
-<li>Vamos imaginar três possíveis conjuntos de dados para $X$<ol>
-<li>$X_1$ só terá exemplos da classe positiva (+)</li>
-<li>$X_2$ só terá exemplos da classe negativa (-)</li>
-<li>$X_3$ terá metade dos exemplos da classe positiva e a outra metade da classe negativa</li>
-</ol>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Como $X_1$ só tem exemplos da classe positiva, então a probabilidade de um exemplo ser:</p>
-<ul>
-<li>da classe positiva é simplesmente $p_+=1$</li>
-<li>da classe negativa é $p_-=0$</li>
-</ul>
-</li>
-<li><p>A entropia de $X_1$ é:</p>
-</li>
-</ul>
-\begin{array}{lcl} 
-E(X)&amp;= &amp; -\;(&amp;p_+ \times \log_2{p_+} &amp; + &amp; p_- \times \log_2{p_-}&amp;)  \\ 
-E(X_1)&amp;= &amp; -\;(&amp;1 \times \log_2{1} &amp; + &amp; 0 \times \log_2{0}&amp;)  \\ 
-E(X_1)&amp;= &amp; -\;(&amp;1 \times 0 &amp; + &amp; 0 &amp;)  \\ 
-E(X_1)&amp;= &amp; -\;(&amp; 0 &amp; + &amp; 0 &amp;)  \\ 
-E(X_1)&amp;= &amp; 0
-\end{array}<ul>
-<li>Uma <em>entropia</em> igual a <em>zero</em> significa que não há desordem neste conjunto de dados, devido a que todas os exemplos de $X_1$ são da mesma classe.</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>O conjunto $X_2$ apenas tem exemplos da classe negativa, então a probabilidade de um exemplo ser:</p>
-<ul>
-<li>da classe positiva é $p_+=0$</li>
-<li>da classe negativa é $p_-=1$</li>
-</ul>
-</li>
-<li><p>A entropia de $X_2$ é:</p>
-</li>
-</ul>
-\begin{array}{llllll}
-E(X)&amp;= &amp; -\;(&amp;p_+ \times \log_2{p_+} &amp; + &amp; p_- \times \log_2{p_-}&amp;)  \\ 
-E(X_2)&amp;= &amp; -\;(&amp;0 \times \log_2{0} &amp; + &amp; 1 \times \log_2{1}&amp;)  \\ 
-E(X_2)&amp;= &amp; -\;(&amp;0 &amp; + &amp; 1 \times 0&amp;)  \\ 
-E(X_2)&amp;= &amp; -\;(&amp; 0 &amp; + &amp; 0 &amp;)  \\ 
-E(X_2)&amp;= &amp; 0
-\end{array}<ul>
-<li>Neste caso, a <em>desordem</em> também é zero devido a todos os elementos serem da classe negativa (-)</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Já no conjunto $X_3$ temos exemplos de ambas as classes, e a probabilidade de ser:</p>
-<ul>
-<li>da classe positiva é $p_+=1/2$ ou $0.5$ ou $2^{-1}$</li>
-<li>da classe negativa é $p_-=1/2$</li>
-</ul>
-</li>
-<li><p>A entropia é:</p>
-</li>
-</ul>
-\begin{array}{llllll}
-E(X)&amp;= &amp; -\;(&amp;p_+ \times \log_2{p_+} &amp; + &amp; p_- \times \log_2{p_-}&amp;)  \\ 
-E(X_3)&amp;= &amp; -\;(&amp;0.5 \times \log_2{0.5} &amp; + &amp; 0.5 \times \log_2{0.5}&amp;)  \\ 
-E(X_3)&amp;= &amp; -\;(&amp;0.5 \times \log_2{2^{-1}} &amp; + &amp; 0.5 \times \log_2{2^{-1}}&amp;)  \\ 
-E(X_3)&amp;= &amp; -\;(&amp;-0.5 \times \log_2{2} &amp; + &amp; - 0.5 \times \log_2{2}&amp;)  \\ 
-E(X_3)&amp;= &amp; -\;(&amp;-0.5 \times 1 &amp; + &amp; - 0.5 \times 1&amp;)  \\ 
-E(X_3)&amp;= &amp; -\;(&amp;-0.5 &amp; + &amp; -0.5 &amp;)  \\ 
-E(X_3)&amp;= &amp; -\;(&amp; - 1 &amp;&amp;&amp;)  \\ 
-E(X_3)&amp;= &amp; 1
-\end{array}<ul>
-<li><p>No conjunto $X_3$ a <em>entropia</em> ou desordem é 1 (máxima)</p>
-</li>
-<li><p>Isso indica que em $X_3$ não é possível observar que alguma das classes prevalece nesse conjunto de dados.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Agora, vamos considerar um conjunto de dados $X_4$ que possui $1/4$ de exemplos da classe positiva e $3/4$ de exemplos da classe negativa.</p>
-</li>
-<li><p>Em uma problema de duas classes espera-se que o valor da entropia esteja entre 0 e 1.</p>
-</li>
-</ul>
-\begin{array}{llllll}
-E(X)&amp;  = &amp; -\;(&amp;p_+ \times \log_2{p_+}   &amp; + &amp; p_- \times \log_2{p_-}&amp;)  \\ 
-E(X_4)&amp;= &amp; -\;(&amp;1/4 \times \log_2{1/4} &amp; + &amp; 3/4 \times \log_2{3/4}&amp;)  \\ 
-E(X_4)&amp;= &amp; -\;(&amp;1/4 \times [\log_2{1} - \log_2{4}] &amp; + &amp; 3/4 \times [\log_2{3} - \log_2{4}]&amp;)  \\ 
-E(X_4)&amp;= &amp; -\;(&amp;1/4 \times [0 - 2] &amp; + &amp; 3/4 \times [1.58 - 2]&amp;)  \\ 
-E(X_4)&amp;= &amp; -\;(&amp;1/4 \times -2 &amp; + &amp; 3/4 \times -0.42&amp;)  \\ 
-E(X_4)&amp;= &amp; -\;(&amp;-0.5 &amp; + &amp; -0.32&amp;)  \\ 
-E(X_4)&amp;= &amp; -\;(&amp;-0.82 &amp;&amp;&amp; )  \\ 
-E(X_4)&amp;= &amp; 0.82  \\ 
-\end{array}
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Uma-fun&#231;&#227;o-para-c&#225;lculo-de-entropia-para-duas-classes">Uma fun&#231;&#227;o para c&#225;lculo de entropia para duas classes<a class="anchor-link" href="#Uma-fun&#231;&#227;o-para-c&#225;lculo-de-entropia-para-duas-classes">&#182;</a></h3><ul>
-<li>Nesta função podemos passar como parâmetro o vetor de probabilidades das classes <code>vp</code>.</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[337]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">entropia</span> <span class="p">(</span><span class="n">vp</span><span class="p">):</span>
@@ -13677,6 +13470,40 @@ E(X_4)&amp;= &amp; 0.82  \\
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">vp</span> <span class="p">:</span>
         <span class="n">somatorio</span> <span class="o">+=</span> <span class="mi">0</span> <span class="k">if</span> <span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">else</span> <span class="n">p</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>    
     <span class="k">return</span> <span class="n">somatorio</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">entropia_valores</span><span class="p">(</span><span class="n">valores</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">collections</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">valores</span><span class="p">)</span>
+    <span class="n">vp</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">valores</span><span class="p">))</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">counter</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="p">]</span>    
+    <span class="k">return</span> <span class="n">entropia</span><span class="p">(</span><span class="n">vp</span><span class="p">)</span>    
+
+<span class="k">def</span> <span class="nf">entropia_atributo</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">classe</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">somatorio</span> <span class="o">=</span> <span class="mi">0</span>    
+    <span class="k">for</span> <span class="n">valor</span><span class="p">,</span> <span class="n">Xj</span> <span class="ow">in</span> <span class="n">X</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">atributo</span><span class="p">):</span>        
+        <span class="n">p_Xj</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Xj</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>        
+        <span class="n">E_Xj</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">Xj</span><span class="p">[</span><span class="n">classe</span><span class="p">])</span>
+        <span class="n">somatorio</span> <span class="o">+=</span> <span class="n">p_Xj</span> <span class="o">*</span> <span class="n">E_Xj</span>        
+    <span class="k">return</span> <span class="n">somatorio</span>
+
+<span class="k">def</span> <span class="nf">entropia_atributo_detalhes</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">classe</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">somatorio</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">detalhes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span><span class="s1">&#39;prop_Xj&#39;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">valor</span><span class="p">,</span> <span class="n">Xj</span> <span class="ow">in</span> <span class="n">X</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">atributo</span><span class="p">):</span>        
+        <span class="n">p_Xj</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Xj</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>        
+        <span class="n">E_Xj</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">Xj</span><span class="p">[</span><span class="n">classe</span><span class="p">])</span>
+        <span class="n">somatorio</span> <span class="o">+=</span> <span class="n">p_Xj</span> <span class="o">*</span> <span class="n">E_Xj</span>
+        <span class="n">detalhes</span> <span class="o">=</span> <span class="n">detalhes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;valor&#39;</span> <span class="p">:</span> <span class="n">valor</span><span class="p">,</span> <span class="s1">&#39;prop_Xj&#39;</span> <span class="p">:</span> <span class="n">p_Xj</span><span class="p">,</span> <span class="s1">&#39;E(Xj)&#39;</span> <span class="p">:</span> <span class="n">E_Xj</span> <span class="p">},</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">somatorio</span><span class="p">,</span> <span class="n">detalhes</span>
+
+<span class="k">def</span> <span class="nf">ganho_de_informacao</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">atributo</span><span class="p">,</span><span class="n">classe</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">E_X</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">classe</span><span class="p">])</span>
+    <span class="n">E_X_A</span> <span class="o">=</span> <span class="n">entropia_atributo</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">atributo</span><span class="p">,</span><span class="n">classe</span><span class="p">)</span>
+    <span class="k">return</span>  <span class="n">E_X</span> <span class="o">-</span> <span class="n">E_X_A</span>
+
+<span class="k">def</span> <span class="nf">razao_de_ganho</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">classe</span><span class="p">):</span>
+    <span class="n">IG</span> <span class="o">=</span> <span class="n">ganho_de_informacao</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">classe</span><span class="p">)</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">atributo</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">IG</span> <span class="o">/</span> <span class="n">I</span>
 </pre></div>
 
     </div>
@@ -13686,13 +13513,236 @@ E(X_4)&amp;= &amp; 0.82  \\
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[338]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Entropia X1 -&gt; vp:[1.0 , 0.0]&#39;</span><span class="p">,</span> <span class="n">entropia</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Entropia X2 -&gt; vp:[0.0 , 1.0]&#39;</span><span class="p">,</span> <span class="n">entropia</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Entropia X3 -&gt; vp:[0.5 , 0.5]&#39;</span><span class="p">,</span> <span class="n">entropia</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Entropia X4 -&gt; vp:[0.25,0.75]&#39;</span><span class="p">,</span> <span class="n">entropia</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.75</span><span class="p">])</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_sort</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">df_sort</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,:][</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[41]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;positive&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_sort</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;x &lt; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[49]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>class</th>
+      <th>x</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>8</th>
+      <td>positive</td>
+      <td>1.205982</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>positive</td>
+      <td>1.427808</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>positive</td>
+      <td>1.519222</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>positive</td>
+      <td>1.745679</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>positive</td>
+      <td>1.837909</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>negative</td>
+      <td>2.012456</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>positive</td>
+      <td>2.017933</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>negative</td>
+      <td>2.056623</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>positive</td>
+      <td>2.216332</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>negative</td>
+      <td>2.244174</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>negative</td>
+      <td>2.327707</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>negative</td>
+      <td>2.404156</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>positive</td>
+      <td>2.490402</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>negative</td>
+      <td>2.500114</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>positive</td>
+      <td>2.536425</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>negative</td>
+      <td>2.663350</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>positive</td>
+      <td>2.713888</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>negative</td>
+      <td>2.801577</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;positive&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[80]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">df_sort</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,:][</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">df_sort</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,:][</span><span class="s1">&#39;class&#39;</span><span class="p">]):</span>
+        <span class="n">sp</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_sort</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,:][</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df_sort</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,:][</span><span class="s1">&#39;x&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">df_left</span>  <span class="o">=</span> <span class="n">df_sort</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;x &lt;= &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sp</span><span class="p">))</span>
+        <span class="n">df_right</span> <span class="o">=</span> <span class="n">df_sort</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;x &gt; &#39;</span>  <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sp</span><span class="p">))</span>
+        <span class="n">E_left</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">df_left</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
+        <span class="n">E_right</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">df_right</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
+        <span class="n">E</span> <span class="o">=</span> <span class="mf">0.8</span> <span class="o">*</span><span class="p">(</span><span class="n">E_left</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">df_left</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="p">(</span><span class="n">E_right</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">df_right</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+        <span class="n">IG</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span> <span class="o">-</span> <span class="n">E</span>
+        <span class="n">EH</span> <span class="o">=</span> <span class="n">E_left</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">df_left</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">*</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_left</span><span class="p">[</span><span class="n">df_left</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;positive&#39;</span><span class="p">])</span> <span class="o">/</span>  <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;positive&#39;</span><span class="p">])</span>  <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">E_left</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">E_right</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">E</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">IG</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">EH</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13709,10 +13759,17 @@ E(X_4)&amp;= &amp; 0.82  \\
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Entropia X1 -&gt; vp:[1.0 , 0.0] -0.0
-Entropia X2 -&gt; vp:[0.0 , 1.0] -0.0
-Entropia X3 -&gt; vp:[0.5 , 0.5] 1.0
-Entropia X4 -&gt; vp:[0.25,0.75] 0.8112781244591328
+<pre>1.93 -0.0 0.59 0.1 0.71 -0.0
+2.02 0.65 0.6 0.18 0.63 0.05
+2.04 0.59 0.53 0.17 0.64 0.06
+2.14 0.81 0.54 0.22 0.59 0.1
+2.23 0.76 0.46 0.21 0.6 0.12
+2.45 0.98 0.49 0.3 0.51 0.21
+2.5 0.96 0.38 0.3 0.51 0.25
+2.52 0.99 0.39 0.33 0.48 0.28
+2.6 0.97 0.24 0.32 0.49 0.33
+2.69 0.99 0.25 0.35 0.46 0.36
+2.76 0.98 -0.0 0.33 0.48 0.42
 </pre>
 </div>
 </div>
@@ -13720,26 +13777,13 @@ Entropia X4 -&gt; vp:[0.25,0.75] 0.8112781244591328
 </div>
 </div>
 
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Com essa função podemos calcular qual a entropia à medida que a probabilidade da classe positiva aumenta de 5% em 5%.</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[232]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.01</span><span class="p">,</span><span class="mf">0.05</span><span class="p">)</span>
-<span class="n">ventropias</span> <span class="o">=</span> <span class="p">[</span><span class="n">entropia</span><span class="p">([</span> <span class="n">p</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">p</span> <span class="p">])</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">vp</span><span class="p">]</span>
-<span class="n">df_entropia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s1">&#39;p.positiva&#39;</span> <span class="p">:</span> <span class="n">vp</span><span class="p">,</span> <span class="s1">&#39;entropia&#39;</span> <span class="p">:</span> <span class="n">ventropias</span><span class="p">})</span>
-<span class="n">df_entropia</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;x &lt; 3&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13752,7 +13796,7 @@ Entropia X4 -&gt; vp:[0.25,0.75] 0.8112781244591328
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[232]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -13775,939 +13819,100 @@ Entropia X4 -&gt; vp:[0.25,0.75] 0.8112781244591328
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>p.positiva</th>
-      <th>entropia</th>
+      <th>class</th>
+      <th>x</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>0.00</td>
-      <td>-0.0000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.05</td>
-      <td>0.2864</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.10</td>
-      <td>0.4690</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.15</td>
-      <td>0.6098</td>
+      <th>8</th>
+      <td>positive</td>
+      <td>1.205982</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.20</td>
-      <td>0.7219</td>
+      <td>positive</td>
+      <td>1.427808</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>positive</td>
+      <td>1.519222</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.25</td>
-      <td>0.8113</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.30</td>
-      <td>0.8813</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.35</td>
-      <td>0.9341</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0.40</td>
-      <td>0.9710</td>
+      <td>positive</td>
+      <td>1.745679</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.45</td>
-      <td>0.9928</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.50</td>
-      <td>1.0000</td>
+      <td>positive</td>
+      <td>1.837909</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.55</td>
-      <td>0.9928</td>
+      <td>negative</td>
+      <td>2.012456</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>0.60</td>
-      <td>0.9710</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>0.65</td>
-      <td>0.9341</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>0.70</td>
-      <td>0.8813</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>0.75</td>
-      <td>0.8113</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>0.80</td>
-      <td>0.7219</td>
+      <th>1</th>
+      <td>positive</td>
+      <td>2.017933</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>0.85</td>
-      <td>0.6098</td>
+      <td>negative</td>
+      <td>2.056623</td>
     </tr>
     <tr>
-      <th>18</th>
-      <td>0.90</td>
-      <td>0.4690</td>
+      <th>6</th>
+      <td>positive</td>
+      <td>2.216332</td>
     </tr>
     <tr>
-      <th>19</th>
-      <td>0.95</td>
-      <td>0.2864</td>
+      <th>13</th>
+      <td>negative</td>
+      <td>2.244174</td>
     </tr>
     <tr>
-      <th>20</th>
-      <td>1.00</td>
-      <td>-0.0000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Este apresenta o valor de entropia em função da probabilidade da classe positiva</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[350]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;p.positiva&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;entropia&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df_entropia</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[350]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.FacetGrid at 0x1eb0dd86b70&gt;</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="C&#225;lculo-de-Entropia-para-Problemas-de-M&#250;ltiplas-Classes">C&#225;lculo de Entropia para Problemas de M&#250;ltiplas Classes<a class="anchor-link" href="#C&#225;lculo-de-Entropia-para-Problemas-de-M&#250;ltiplas-Classes">&#182;</a></h3><ul>
-<li><p>Muitos dos problemas que nos enfrentamos atualmente em mineração de dados possuem mais do que duas classes</p>
-</li>
-<li><p>A Equação geral para cálculo de entropia de um conjunto de dados é:</p>
-</li>
-</ul>
-$$ E(X) = - \sum_{i}^{c} p_i \times \log_2{p_i} $$<ul>
-<li>onde,<ul>
-<li>$c$ é o número de classes do problema.</li>
-<li>$p_i$ é a probabilidade de um exemplo ser da $i$-ésima classe.</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Note que para $c=2$ a equação é equivalente à de duas classes, definida anteriormente:</li>
-</ul>
-\begin{array}{llllll}
-E(X) &amp; = &amp; - \sum_{i=1}^{c=2} p_i \times \log_2{p_i} \\ 
-E(X) &amp; = &amp; -\;(\;\;p_1 \times \log_2{p_1}\;+\;p_2 \times \log_2{p_2}\;\;)
-\end{array}
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Uma-Fun&#231;&#227;o-para-Calcular-a-Entropia-do-Conjunto-para-M&#250;ltiplas-Classes">Uma Fun&#231;&#227;o para Calcular a Entropia do Conjunto para M&#250;ltiplas Classes<a class="anchor-link" href="#Uma-Fun&#231;&#227;o-para-Calcular-a-Entropia-do-Conjunto-para-M&#250;ltiplas-Classes">&#182;</a></h3><ul>
-<li><p>Como a entropia de um conjunto de dados depende da coluna de dados do atributo classe. Neste implementação usaremos os valores desse atributo para calcular a entropia, ao invés das probabilidades.</p>
-</li>
-<li><p>Assim, primeiro calculamos a frequência de elementos, usando a função Counter que cria uma dicionário com os possíveis valores e a frequência. Depois dividimos a frequência pelo total de valores, obtendo as probabilidades das classes, $P = (p_1, p_2, \dots, p_c)$.</p>
-</li>
-<li><p>E após, com $P$ fazemos o calculo de entropia.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[351]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">entropia_valores</span><span class="p">(</span><span class="n">valores</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">collections</span>
-    <span class="n">counter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">valores</span><span class="p">)</span>
-    <span class="n">vp</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">valores</span><span class="p">))</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">counter</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="p">]</span>    
-    <span class="k">return</span> <span class="n">entropia</span><span class="p">(</span><span class="n">vp</span><span class="p">)</span>    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Podemos usar essa função para medir a entropia de qualquer coleção de dados. A seguir uma coleção de dados de uma amostra de atributo classe aleatória com valores 'C1', 'C2' ou 'C3'.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[257]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">random_class</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C3&#39;</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">random_class</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[257]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;C1&#39;, &#39;C3&#39;, &#39;C3&#39;, &#39;C2&#39;, &#39;C2&#39;, &#39;C2&#39;, &#39;C1&#39;, &#39;C3&#39;, &#39;C1&#39;, &#39;C3&#39;],
-      dtype=&#39;&lt;U2&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[258]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entropia_valores</span><span class="p">(</span><span class="n">random_class</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[258]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.5709505944546684</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Exercício 1</strong></p>
-<ul>
-<li>Ordenar o atributo classe <code>random_class</code> em ordem crescente.</li>
-<li>Calcule a entropia do atributo classe novamente. Você observou alguma diferença no valor da entropia? Explique a sua resposta. </li>
-</ul>
-<p><strong>Exercício 2</strong></p>
-<ul>
-<li>Para este problema de classes <code>C1</code>, <code>C2</code> e <code>C3</code> foi selecionada uma amostra que possui apenas instâncias da classe <code>C1</code> e <code>C3</code>. Qual é a entropia máxima que essa nova amostra pode alcançar? Explique sua resposta.</li>
-</ul>
-<p><strong>Exercício 3</strong></p>
-<ul>
-<li>Para este problema de classes <code>C1</code>, <code>C2</code> e <code>C3</code> foi selecionada uma amostra que possui apenas instâncias da classe <code>C2</code>. Qual é a entropia desse conjunto de dados? Explique sua resposta.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Entropia-de-Atributos">Entropia de Atributos<a class="anchor-link" href="#Entropia-de-Atributos">&#182;</a></h2><ul>
-<li><p>Embora já conseguimos calcular a entropia de um conjunto de dados, baseado na sua classe, ainda precisamos calcular a <em>desordem</em> que cada atributo produz no conjunto de dados.</p>
-</li>
-<li><p>Um atributo terá uma baixa entropia se os seus valores permitem dividir o conjunto de dados em partes com baixa entropia.</p>
-</li>
-<li><p>Assim, para um atributo ter entropia 0 precisará que os valores do atributo dividam o conjunto de dados em partes com apenas uma classe.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Exemplo:</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[259]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">atributo1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">]</span>
-<span class="n">classe</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">]</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A1&#39;</span><span class="p">:</span> <span class="n">atributo1</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">:</span> <span class="n">classe</span><span class="p">})</span>
-<span class="n">df1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[259]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A1</th>
-      <th>classe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>v1</td>
-      <td>C1</td>
+      <th>14</th>
+      <td>negative</td>
+      <td>2.327707</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>v1</td>
-      <td>C1</td>
+      <th>29</th>
+      <td>negative</td>
+      <td>2.404156</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>v2</td>
-      <td>C2</td>
+      <th>7</th>
+      <td>positive</td>
+      <td>2.490402</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>v2</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>v1</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>v2</td>
-      <td>C2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Observe o número de exemplos de cada classe para cada valor do atributo.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[260]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df1</span><span class="o">.</span><span class="n">A1</span><span class="p">,</span> <span class="n">df1</span><span class="o">.</span><span class="n">classe</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[260]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>classe</th>
-      <th>C1</th>
-      <th>C2</th>
-    </tr>
-    <tr>
-      <th>A1</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>v1</th>
-      <td>3</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>v2</th>
-      <td>0</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Cada valor de atributo apresenta exemplos de apenas uma classe. Isso significa que os valores desse atributo permitem diferenciar bem as classes do problema.</p>
-</li>
-<li><p>Para calcular a entropia de um atributo é necessário calcular a entropia de cada um dos conjuntos de dados gerados pelos seus valores e usar esse valor proporcionalmente ao tamanho de cada conjunto.</p>
-</li>
-<li><p>Veja os dois subconjuntos de dados gerados a partir dos valores do atributo <code>v1</code> e <code>v2</code> do atributo <code>A1</code>.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[261]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_v1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">)</span>
-<span class="n">X_v1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[261]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A1</th>
-      <th>classe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>v1</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>v1</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>v1</td>
-      <td>C1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[262]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_v2</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="s1">&#39;v2&#39;</span><span class="p">)</span>
-<span class="n">X_v2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[262]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A1</th>
-      <th>classe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>v2</td>
-      <td>C2</td>
+      <td>negative</td>
+      <td>2.500114</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>v2</td>
-      <td>C2</td>
+      <td>positive</td>
+      <td>2.536425</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>v2</td>
-      <td>C2</td>
+      <th>22</th>
+      <td>negative</td>
+      <td>2.663350</td>
     </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Seja um atributo $A$ com possíveis valores $v_1, v_2, \ldots, v_m$, o cálculo de Entropia do Atributo $A$ é definido por:</li>
-</ul>
-$$ E(X,A) = \sum_{j=1}^{m} \frac{|X_{j}|}{|X|} \times E(X_{j})  $$<ul>
-<li>onde,<ul>
-<li>$A$ é um atributo</li>
-<li>$v$ é cada valor do atributo $A$, sem repetir</li>
-<li>$X_{j}$ é a partição do conjunto $X$ em que o atributo $A$ possui valor $v_j$</li>
-<li>$|X_{j}| / |X|$ é a proporção de valores $v_j$ no conjunto de dados</li>
-<li>$E(X_j)$ é a entropia do conjunto $X_j$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Suponha o atributo definido no exemplo anterior, definido como $A_1$ e sejam <code>X_1</code> e <code>X_2</code> os subconjuntos de dados para os valores <code>v1</code> e <code>v2</code> do atributo, respectivamente. Calculamos a entropia do atributo $A_1$ em relação à classe da seguinte forma:</p>
-\begin{array}{lllll}
-E(X,A) &amp; = &amp; \sum_{j=1}^{m} \frac{|X_{j}|}{|X|} \times E(X_{j})  \\ 
-E(X,A_1) &amp; = &amp; \sum_{j=1}^{m=2} \frac{|X_{j}|}{|X|} \times E(X_{j}) \\
-E(X,A_1) &amp; = &amp; \frac{|X_{1}|}{|X|} \times E(X_{1}) + \frac{|X_{2}|}{|X|} \times E(X_{2}) \\
-E(X,A_1) &amp; = &amp; \frac{3}{6} \times E(X_{1}) + \frac{3}{6} \times E(X_{2}) \\ 
-E(X,A_1) &amp; = &amp; \frac{3}{6} \times 0 + \frac{3}{6} \times 0 \\ 
-E(X,A_1) &amp; = &amp; 0 \\
-\end{array}<ul>
-<li>De fato como já tínhamos visto esse atributo divide perfeitamente as classes do conjunto de dados.</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Adicionando um Novo Atributo ao Conjunto</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[263]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">atributo1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">]</span>
-<span class="n">atributo2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">]</span>
-<span class="n">classe</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">]</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A1&#39;</span><span class="p">:</span> <span class="n">atributo1</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">:</span> <span class="n">atributo2</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">:</span> <span class="n">classe</span><span class="p">})</span>
-<span class="n">df1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[263]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A1</th>
-      <th>A2</th>
-      <th>classe</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>0</th>
-      <td>v1</td>
-      <td>v1</td>
-      <td>C1</td>
+      <td>positive</td>
+      <td>2.713888</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>v1</td>
-      <td>v2</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>v1</td>
-      <td>v2</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>A seguir dos dois subconjuntos de dados gerados a partir dos valores do $A_2$: <code>v1</code> e <code>v2</code>.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Observe o número de exemplos de cada classe para cada valor do atributo.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[264]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_v1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">)</span>
-<span class="n">X_v1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[264]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A1</th>
-      <th>A2</th>
-      <th>classe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>v1</td>
-      <td>v1</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
+      <th>23</th>
+      <td>negative</td>
+      <td>2.801577</td>
     </tr>
   </tbody>
 </table>
@@ -14722,11 +13927,10 @@ E(X,A_1) &amp; = &amp; 0 \\
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[265]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_v2</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="s1">&#39;v2&#39;</span><span class="p">)</span>
-<span class="n">X_v2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entropia_valores</span><span class="p">(</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;x &lt; 3&#39;</span><span class="p">)[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -14739,241 +13943,13 @@ E(X,A_1) &amp; = &amp; 0 \\
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[265]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A1</th>
-      <th>A2</th>
-      <th>classe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>v1</td>
-      <td>v2</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>v1</td>
-      <td>v2</td>
-      <td>C1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Podemos observar que esse atributo não divide o conjunto em subconjuntos com apenas uma classe.</p>
-</li>
-<li><p>Calculando a entropia do subconjunto $X_1$:</p>
-</li>
-</ul>
-\begin{array}{llllll}
-E(X_1) &amp; = &amp; -\;(\;\;p_{C1} \times \log_2{p_{C1}}\;+\;p_{C2} \times \log_2{p_{C2}}\;\;)\\
-E(X_1) &amp; = &amp; -\;(\;\;1/4 \times \log_2{1/4}\;+\;3/4 \times \log_2{3/4}\;\;)\\
-E(X_1) &amp; = &amp; 0.8113\\
-\end{array}<ul>
-<li>Calculando a entropia do subconjunto $X_2$:</li>
-</ul>
-\begin{array}{llllll}
-E(X_2) &amp; = &amp; -\;(\;\;p_{C1} \times \log_2{p_{C1}}\;+\;p_{C2} \times \log_2{p_{C2}}\;\;)\\
-E(X_2) &amp; = &amp; -\;(\;\;2/2 \times \log_2{2/2}\;+\;0/2 \times \log_2{0/2}\;\;)\\
-E(X_2) &amp; = &amp; 0
-\end{array}
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Seja $A_2$ o atributo 2 do conjunto de dados. A entropia desse atributo é calculada como segue:</p>
-\begin{array}{lllll}
-E(X,A_2) &amp; = &amp; \sum_{j=1}^{m} \frac{|X_{j}|}{|X|} \times E(X_{j})  \\ 
-E(X,A_2) &amp; = &amp; \sum_{j=1}^{m=2} \frac{|X_{j}|}{|X|} \times E(X_{j}) \\
-E(X,A_2) &amp; = &amp; \frac{|X_{1}|}{|X|} \times E(X_{1}) + \frac{|X_{2}|}{|X|} \times E(X_{2}) \\
-E(X,A_2) &amp; = &amp; \frac{4}{6} \times E(X_{1}) + \frac{2}{6} \times E(X_{2}) \\ 
-E(X,A_2) &amp; = &amp; \frac{4}{6} \times 0.8113 + \frac{2}{6} \times 0 \\ 
-E(X,A_2) &amp; = &amp; 0.5409 \\
-\end{array}<ul>
-<li><p>Ao analizarmos a entropia dos atributo $A_1$ e $A_2$, observamos que a entropia do atributo $A_1$ é menor do que a do atributo $A_2$.</p>
-</li>
-<li><p>Isso inidica que o fato de conhecer o atributo $A_1$ gera conjuntos de dados com pouca <em>desordem</em>.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Fun&#231;&#227;o-para-C&#225;lculo-da-Entropia-do-Atributo">Fun&#231;&#227;o para C&#225;lculo da Entropia do Atributo<a class="anchor-link" href="#Fun&#231;&#227;o-para-C&#225;lculo-da-Entropia-do-Atributo">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[266]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1</span><span class="p">[[</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span><span class="s1">&#39;classe&#39;</span><span class="p">]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[266]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A2</th>
-      <th>classe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>v1</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>v2</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>v2</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[295]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">entropia_atributo</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">classe</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">somatorio</span> <span class="o">=</span> <span class="mi">0</span>    
-    <span class="k">for</span> <span class="n">valor</span><span class="p">,</span> <span class="n">Xj</span> <span class="ow">in</span> <span class="n">X</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">atributo</span><span class="p">):</span>        
-        <span class="n">p_Xj</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Xj</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>        
-        <span class="n">E_Xj</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">Xj</span><span class="p">[</span><span class="n">classe</span><span class="p">])</span>
-        <span class="n">somatorio</span> <span class="o">+=</span> <span class="n">p_Xj</span> <span class="o">*</span> <span class="n">E_Xj</span>        
-    <span class="k">return</span> <span class="n">somatorio</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[296]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entropia_atributo</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[296]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
+<pre>0.9910760598382222</pre>
 </div>
 
 </div>
@@ -14984,592 +13960,16 @@ E(X,A_2) &amp; = &amp; 0.5409 \\
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[297]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">entropia_atributo</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[297]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.5408520829727552</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[298]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">entropia_atributo_detalhes</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">classe</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">somatorio</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">detalhes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span><span class="s1">&#39;prop_Xj&#39;</span><span class="p">])</span>
-    <span class="k">for</span> <span class="n">valor</span><span class="p">,</span> <span class="n">Xj</span> <span class="ow">in</span> <span class="n">X</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">atributo</span><span class="p">):</span>        
-        <span class="n">p_Xj</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Xj</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>        
-        <span class="n">E_Xj</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">Xj</span><span class="p">[</span><span class="n">classe</span><span class="p">])</span>
-        <span class="n">somatorio</span> <span class="o">+=</span> <span class="n">p_Xj</span> <span class="o">*</span> <span class="n">E_Xj</span>
-        <span class="n">detalhes</span> <span class="o">=</span> <span class="n">detalhes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;valor&#39;</span> <span class="p">:</span> <span class="n">valor</span><span class="p">,</span> <span class="s1">&#39;prop_Xj&#39;</span> <span class="p">:</span> <span class="n">p_Xj</span><span class="p">,</span> <span class="s1">&#39;E(Xj)&#39;</span> <span class="p">:</span> <span class="n">E_Xj</span> <span class="p">},</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">somatorio</span><span class="p">,</span> <span class="n">detalhes</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[299]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">E_A1</span><span class="p">,</span> <span class="n">detalhes</span> <span class="o">=</span> <span class="n">entropia_atributo_detalhes</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">)</span>
-<span class="n">detalhes</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[299]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>valor</th>
-      <th>prop_Xj</th>
-      <th>E(Xj)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>v1</td>
-      <td>0.5</td>
-      <td>-0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>v2</td>
-      <td>0.5</td>
-      <td>-0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[300]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">E_A2</span><span class="p">,</span> <span class="n">detalhes</span> <span class="o">=</span> <span class="n">entropia_atributo_detalhes</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">)</span>
-<span class="n">detalhes</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[300]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>valor</th>
-      <th>prop_Xj</th>
-      <th>E(Xj)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>v1</td>
-      <td>0.666667</td>
-      <td>0.811278</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>v2</td>
-      <td>0.333333</td>
-      <td>-0.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Medidas-de-Import&#226;ncia">Medidas de Import&#226;ncia<a class="anchor-link" href="#Medidas-de-Import&#226;ncia">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ganho-de-Informa&#231;&#227;o-(Information-Gain)">Ganho de Informa&#231;&#227;o (<em>Information Gain</em>)<a class="anchor-link" href="#Ganho-de-Informa&#231;&#227;o-(Information-Gain)">&#182;</a></h3><ul>
-<li><p>O Ganho de Informação (IG) de um atrbiuto consiste diferença entre a entropia inicial do conjunto de dados $X$ e a entropia ao utilizar o atributo $A$.</p>
-</li>
-<li><p>Equação:</p>
-</li>
-</ul>
-$$ IG = E(X) - E(X,A)$$<ul>
-<li>O IG quantifica a redução de entropia esperada por conhecer os valores do atributo A no conjunto X.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[301]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ganho_de_informacao</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">atributo</span><span class="p">,</span><span class="n">classe</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">E_X</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">classe</span><span class="p">])</span>
-    <span class="n">E_X_A</span> <span class="o">=</span> <span class="n">entropia_atributo</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">atributo</span><span class="p">,</span><span class="n">classe</span><span class="p">)</span>
-    <span class="k">return</span>  <span class="n">E_X</span> <span class="o">-</span> <span class="n">E_X_A</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[302]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ganho_de_informacao</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[302]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[303]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ganho_de_informacao</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[303]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.4591479170272448</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="O-problema-do-Ganho-de-Informa&#231;&#227;o-e-da-Entropia:">O problema do Ganho de Informa&#231;&#227;o e da Entropia:<a class="anchor-link" href="#O-problema-do-Ganho-de-Informa&#231;&#227;o-e-da-Entropia:">&#182;</a></h4><ul>
-<li>Ela é enviesada ou tendenciosa (<em>baised</em>) com atributos que possuem muitos valores possíveis.</li>
-<li>Por exemplo, um atributo de ID (como o AnimalID no dataset Shelter Animals), que divide o conjunto de dados em 1 exemplo por partição $X_j$.</li>
-<li>Assim, embora tenhamos muitas partições $X_j$, todas as partições apresentam um único exemplo (de uma classe), consequentemente, entropia baixa.</li>
-<li>A soma dessa entropias irão fazer com que $E(X,A) = 0$, o que maximiza o $IG$.</li>
-<li>No entanto, o atributo de identificação não deve ser um bom atributo para predição.</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Taxa-de-Ganho-(Gain-Ratio)">Taxa de Ganho (<em>Gain Ratio</em>)<a class="anchor-link" href="#Taxa-de-Ganho-(Gain-Ratio)">&#182;</a></h3><ul>
-<li><p>A Taxa de Ganho de um atrbiuto consiste na razão entre o ganho de informação e a informação intrínseca do atributo que vai dividir o conjunto de dados.</p>
-</li>
-<li><p>A informação intrínseca (<em>Intrinsic Information</em> - I) nada mais é do que a entropia dos valores do atributo, sem usar informação da classe.</p>
-</li>
-<li><p>Equação:</p>
-</li>
-</ul>
-$$ GainRatio(X,A) = \frac{IG(X,A)}{I(A)} = \frac{IG(X,A)}{E(A)}$$<ul>
-<li>onde,<ul>
-<li>$IG(X,A)$ é o ganho de informação do atributo $A$ no conjunto $X$</li>
-<li>$E(A)$ é a entropia (<em>cuidado</em>: não é $E(X,A)$ )</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Implementa&#231;&#227;o-da-Fun&#231;&#227;o">Implementa&#231;&#227;o da Fun&#231;&#227;o<a class="anchor-link" href="#Implementa&#231;&#227;o-da-Fun&#231;&#227;o">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[311]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">razao_de_ganho</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">classe</span><span class="p">):</span>
-    <span class="n">IG</span> <span class="o">=</span> <span class="n">ganho_de_informacao</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">classe</span><span class="p">)</span>
-    <span class="n">I</span> <span class="o">=</span> <span class="n">entropia_valores</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">atributo</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">IG</span> <span class="o">/</span> <span class="n">I</span>
-    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exemplo:-Ganho-de-Informa&#231;&#227;o-vs-Raz&#227;o-de-Ganho">Exemplo: Ganho de Informa&#231;&#227;o <em>vs</em> Raz&#227;o de Ganho<a class="anchor-link" href="#Exemplo:-Ganho-de-Informa&#231;&#227;o-vs-Raz&#227;o-de-Ganho">&#182;</a></h4><ul>
-<li>Vamos adicionar um novo atributo chamado <strong>ID</strong>, único para cada registro.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[336]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">atributoID</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;6&#39;</span><span class="p">]</span>
-<span class="n">atributo1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">]</span>
-<span class="n">atributo2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v1&#39;</span><span class="p">]</span>
-<span class="n">classe</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">]</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;ID&#39;</span><span class="p">:</span> <span class="n">atributoID</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">:</span> <span class="n">atributo1</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">:</span> <span class="n">atributo2</span><span class="p">,</span> <span class="s1">&#39;classe&#39;</span><span class="p">:</span> <span class="n">classe</span><span class="p">})</span>
-<span class="n">df2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[336]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>ID</th>
-      <th>A1</th>
-      <th>A2</th>
-      <th>classe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>v1</td>
-      <td>v1</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>v1</td>
-      <td>v2</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>v1</td>
-      <td>v2</td>
-      <td>C1</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>6</td>
-      <td>v2</td>
-      <td>v1</td>
-      <td>C2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[335]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> 
-    <span class="s1">&#39;InformationGain&#39;</span><span class="p">:</span> 
-        <span class="n">df2</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;classe&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
-            <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">ganho_de_informacao</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="s1">&#39;classe&#39;</span><span class="p">),</span><span class="mi">0</span><span class="p">),</span>
-    <span class="s1">&#39;GainRatio&#39;</span><span class="p">:</span>
-        <span class="n">df2</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;classe&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
-            <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">razao_de_ganho</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="s1">&#39;classe&#39;</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span> 
-<span class="p">})</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[335]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>InformationGain</th>
-      <th>GainRatio</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>ID</th>
-      <td>1.000000</td>
-      <td>0.386853</td>
-    </tr>
-    <tr>
-      <th>A1</th>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>A2</th>
-      <td>0.459148</td>
-      <td>0.500000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Considera&#231;&#245;es">Considera&#231;&#245;es<a class="anchor-link" href="#Considera&#231;&#245;es">&#182;</a></h3><ul>
-<li><p>As duas medidas, em geral, retornam bons resultados, pois não é comum usar atributos como o ID para fazer predições</p>
-</li>
-<li><p>O ganho de informação é tendencioso com atributos com muitos valores possíveis</p>
-</li>
-<li><p>A taxa de ganho tende a favorecer atributos com menos valores possíveis e mais <em>balanceados</em></p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Gini-Index">Gini Index<a class="anchor-link" href="#Gini-Index">&#182;</a></h2><ul>
-<li>Uma outra medida frequentemente utilizada para medir a qualidade de atributos é o Índice Gini.</li>
-<li>Esse índice permite medir a heterogeneidade de um conjunto de dados, usando somente as proporções das classes (sem usar log como na entropia).</li>
-<li>Iniciamos medido o índice do conjunto de dados, considerando apenas a proporção das classes, como segue:</li>
-</ul>
-$$ Gini(X) = 1 - \sum_{i}^{c} p_i^2 $$<ul>
-<li>A partir disso podemos calcular o índice de cada atributo, como segue:</li>
-</ul>
-$$ Gini(X,A) = \sum_{j=1}^{m} \frac{|X_{j}|}{|X|} \times Gini(X_{j})  $$<ul>
-<li>E a variação do Gini por conhecer o valor do atributo, que é a medida de qualidade do atributo, é dada por:</li>
-</ul>
-$$ \Delta Gini = Gini(X) - Gini(X,A)$$
-</div>
-</div>
 </div></section></section>
 </div>
 </div>
